@@ -193,7 +193,7 @@ def build_index(prog):
                esc(c["wifi"]["network"]), esc(c["wifi"]["password"]), esc(c["site"]), "".join(cards)))
     tb = ('<div class="topbar"><span class="home">ASSC 29</span>'
           '<span class="crumbs">메모 컴패니언</span></div>')
-    out = PAGE.format(title="ASSC 29 · Notes", css="assets/style.css", topbar=tb, body=body)
+    out = PAGE.format(title="메모 컴패니언", css="assets/style.css", topbar=tb, body=body)
     path = os.path.join(ROOT, "index.html")
     open(path, "w", encoding="utf-8").write(out)
     return "index.html"
