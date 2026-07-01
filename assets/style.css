@@ -159,3 +159,13 @@ footer{margin-top:calc(var(--ma) + 1.5rem); padding-top:20px; border-top:1px sol
   color:var(--sumi); border-radius:10px; padding:14px 18px; font-size:15.5px; margin:20px 0; line-height:1.85}
 .hint code,code{font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:13.5px;
   background:var(--washi2); padding:1px 6px; border-radius:4px}
+
+/* floating “back to top” button — returns to the title / talk list */
+.totop{position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom, 0px));
+  width:46px; height:46px; border-radius:50%; z-index:40;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--card); color:var(--indigo); border:1px solid var(--line2);
+  box-shadow:var(--shadow); font-size:22px; line-height:1; text-decoration:none;
+  transition:background .14s ease, border-color .14s ease}
+.totop:hover{background:var(--inset); border-color:var(--rule); text-decoration:none}
+.totop:active{transform:translateY(1px)}

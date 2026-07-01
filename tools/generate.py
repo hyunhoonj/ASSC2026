@@ -69,11 +69,12 @@ PAGE = """<!doctype html>
 <link rel="stylesheet" href="{css}">
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="top">
 {topbar}
 {body}
 <footer>ASSC 29 · Santiago de Chile · June 30 – July 3, 2026 · 이 페이지는 메모용입니다 — 자유롭게 편집하세요.</footer>
 </div>
+<a href="#top" class="totop" aria-label="맨 위로 (제목·발표 목록)" title="맨 위로">↑</a>
 </body>
 </html>
 """
