@@ -27,8 +27,8 @@
   --shadow:0 1px 2px rgba(70,55,30,.04), 0 8px 24px -16px rgba(70,55,30,.28);
 }
 *{box-sizing:border-box}
-/* scroll-padding keeps anchor targets from hiding under the sticky masthead */
-html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:4rem}
+/* small breathing gap above anchored targets */
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:1.5rem}
 body{
   margin:0; background:var(--washi); color:var(--sumi);
   font:17px/1.9 var(--serif); word-break:keep-all; overflow-wrap:break-word;
@@ -45,12 +45,10 @@ em,i{font-style:italic}
   font-family:var(--sans)}
 h1,h2,h3,h4,.notes h2,.notes h3{font-family:var(--serif)}
 
-/* masthead */
+/* masthead — NOT sticky: it scrolls away with the page, so nothing can bleed over/under it */
 .topbar{display:flex; gap:14px; align-items:center; flex-wrap:nowrap;
   padding:13px 0; margin-bottom:var(--ma); border-bottom:1px solid var(--line);
-  position:sticky; top:0; background:var(--washi); z-index:50;
-  /* promote to its own compositing layer so content can't bleed through on iOS scroll */
-  transform:translateZ(0); isolation:isolate}
+  background:var(--washi)}
 .topbar .home{font-family:var(--serif); font-weight:500; font-size:20px; color:var(--sumi-dk); flex:none}
 .topbar .crumbs{color:var(--muted); font-size:13px; flex:1 1 auto; min-width:0;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
@@ -94,8 +92,8 @@ h4{font-weight:700; font-size:13px; letter-spacing:.02em; color:var(--indigo); m
 .talk:hover .t a{color:var(--indigo)}
 .talk .t a::after{content:" ↓"; color:var(--faint); font-size:12px; opacity:0; transition:opacity .12s ease}
 .talk:hover .t a::after{opacity:1}
-/* anchored note targets clear the sticky masthead when jumped to */
-.notes h3[id]{scroll-margin-top:4rem}
+/* small breathing gap above anchored note targets */
+.notes h3[id]{scroll-margin-top:1.5rem}
 .talk .p{color:var(--muted); font-size:15px; margin-top:3px}
 .speakers{list-style:none; padding:0; margin:12px 0}
 .speakers li{padding:11px 0; border-bottom:1px solid var(--line)}
