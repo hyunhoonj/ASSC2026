@@ -105,6 +105,7 @@ h4{font-weight:700; font-size:13px; letter-spacing:.02em; color:var(--indigo); m
 .notes li{margin:9px 0; line-height:1.9; padding-left:4px}
 .notes li::marker{color:var(--faint)}
 .notes .empty{color:var(--faint)}
+.notes hr{border:0; border-top:1px solid var(--line2); margin:28px 0 22px}
 /* nested callout inside notes (the “※ …” note) */
 .notes .hint{margin:16px 0 4px}
 
