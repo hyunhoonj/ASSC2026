@@ -1,7 +1,16 @@
 /* ASSC 29 conference notes companion — shared styles */
 /* Aesthetic: zen / washi minimalism with soft paper cards. Korean display face: Nanum Myeongjo. */
-@import url('https://cdn.jsdelivr.net/gh/fonts-archive/MaruBuri/MaruBuri.css');
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Maru Buri (마루 부리) — self-hosted so it always applies, no CDN dependency */
+@font-face{font-family:'Maru Buri'; font-weight:300; font-style:normal; font-display:swap;
+  src:url('fonts/MaruBuri-Light.woff2') format('woff2')}
+@font-face{font-family:'Maru Buri'; font-weight:400; font-style:normal; font-display:swap;
+  src:url('fonts/MaruBuri-Regular.woff2') format('woff2')}
+@font-face{font-family:'Maru Buri'; font-weight:600; font-style:normal; font-display:swap;
+  src:url('fonts/MaruBuri-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Maru Buri'; font-weight:700; font-style:normal; font-display:swap;
+  src:url('fonts/MaruBuri-Bold.woff2') format('woff2')}
 
 :root{
   --washi:#f4efe6; --washi2:#efe8dc; --card:#fbf8f2; --inset:#f1ebdf;
