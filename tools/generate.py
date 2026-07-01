@@ -122,8 +122,8 @@ def session_body(s, day):
                    % (esc(s["chair"]["name"]), esc(s["chair"].get("affiliation",""))))
 
     if s.get("talks"):
-        rows = "".join('<div class="talk"><div class="t">%s</div><div class="p">%s</div></div>'
-                       % (esc(t["title"]), esc(t["presenter"])) for t in s["talks"])
+        rows = "".join('<div class="talk" id="talk-%d"><div class="t"><a href="#note-%d">%s</a></div><div class="p">%s</div></div>'
+                       % (i, i, esc(t["title"]), esc(t["presenter"])) for i, t in enumerate(s["talks"], 1))
         sec.append('<h2>발표 (%d)</h2>\n<div class="card">%s</div>' % (len(s["talks"]), rows))
 
     if typ == "poster":
