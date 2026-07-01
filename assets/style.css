@@ -39,9 +39,10 @@ a:hover{text-decoration:underline}
 ::selection{background:#e6dcc6}
 b,strong{font-weight:700; color:var(--sumi-dk)}
 em,i{font-style:italic}
-/* small UI labels stay in crisp sans */
-.topbar .crumbs,.topbar nav,.pill,.slot,.sess .time,.sess .status,.meta-row,h4,.notes h2,.dcard .d,footer{
+/* small UI metadata stays in crisp sans; headings & section labels use the serif (Maru Buri) */
+.topbar .crumbs,.topbar nav,.pill,.slot,.sess .time,.sess .status,.meta-row,.dcard .d,footer{
   font-family:var(--sans)}
+h1,h2,h3,h4,.notes h2,.notes h3{font-family:var(--serif)}
 
 /* masthead */
 .topbar{display:flex; gap:16px; align-items:baseline; flex-wrap:wrap;
