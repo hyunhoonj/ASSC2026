@@ -1,0 +1,1334 @@
+{
+  "conference": {
+    "name": "ASSC 29 — 29th Annual Meeting of the Association for the Scientific Study of Consciousness",
+    "short": "ASSC 29",
+    "city": "Santiago de Chile",
+    "venue": "Casa Central, Pontificia Universidad Católica de Chile",
+    "dates": "June 30 – July 3, 2026",
+    "chairs": [
+      "Jacobo Sitt (Paris Brain Institute)",
+      "Enzo Tagliazucchi (Universidad Adolfo Ibañez)",
+      "Vicente Medel (Universidad Adolfo Ibañez)"
+    ],
+    "wifi": {
+      "network": "UC_CentroExtension",
+      "password": "uc.20251"
+    },
+    "rooms": [
+      "Salon Fresno (plenary)",
+      "Aula Magna",
+      "Salon 202",
+      "Salon 203",
+      "Salon 404",
+      "Plaza (posters/coffee)"
+    ],
+    "hashtag": "#ASSC29",
+    "site": "https://theassc.org/assc-29/"
+  },
+  "days": [
+    {
+      "id": "day1",
+      "folder": "Day1_Jun30_Tue",
+      "date": "2026-06-30",
+      "weekday": "Tuesday",
+      "label": "Day 1 · Tue Jun 30"
+    },
+    {
+      "id": "day2",
+      "folder": "Day2_Jul1_Wed",
+      "date": "2026-07-01",
+      "weekday": "Wednesday",
+      "label": "Day 2 · Wed Jul 1"
+    },
+    {
+      "id": "day3",
+      "folder": "Day3_Jul2_Thu",
+      "date": "2026-07-02",
+      "weekday": "Thursday",
+      "label": "Day 3 · Thu Jul 2"
+    },
+    {
+      "id": "day4",
+      "folder": "Day4_Jul3_Fri",
+      "date": "2026-07-03",
+      "weekday": "Friday",
+      "label": "Day 4 · Fri Jul 3"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "d1-tut-1",
+      "slug": "tutorial-1-phenomenology-neurophenomenology",
+      "type": "tutorial",
+      "number": 1,
+      "day": "day1",
+      "title": "Phenomenology for Neurophenomenology: A Practical Guide for Designing, Collecting, Analyzing, and Reporting First-Person Data",
+      "start": "10:00",
+      "end": "13:00",
+      "room": "Aula Magna",
+      "chair": {
+        "name": "Yair Dor-Ziderman",
+        "affiliation": "University of Haifa"
+      },
+      "speakers": [
+        {
+          "name": "David Martinez-Pernia",
+          "affiliation": "Universidad Adolfo Ibañez"
+        },
+        {
+          "name": "Yair Dor-Ziderman",
+          "affiliation": "University of Haifa"
+        },
+        {
+          "name": "Aviva Berkovich-Ohana",
+          "affiliation": "University of Haifa"
+        }
+      ]
+    },
+    {
+      "id": "d1-tut-2",
+      "slug": "tutorial-2-consciousness-science-beyond-the-lab",
+      "type": "tutorial",
+      "number": 2,
+      "day": "day1",
+      "title": "Consciousness Science Beyond the Lab: A Practical Guide to Building Thriving Research Communities",
+      "start": "10:00",
+      "end": "13:00",
+      "room": "Sala 201A",
+      "chair": {
+        "name": "Joaquim Streicher",
+        "affiliation": "Université de Montréal"
+      },
+      "speakers": [
+        {
+          "name": "Rony Hirschhorn",
+          "affiliation": "Tel Aviv University"
+        },
+        {
+          "name": "Camilo Miguel Signorelli",
+          "affiliation": "Independent"
+        },
+        {
+          "name": "Mar Estarellas",
+          "affiliation": "McGill University"
+        },
+        {
+          "name": "Lenore Blum",
+          "affiliation": "Carnegie Mellon University"
+        },
+        {
+          "name": "Joaquim Streicher",
+          "affiliation": "Université de Montréal"
+        }
+      ]
+    },
+    {
+      "id": "d1-tut-3",
+      "slug": "tutorial-3-why-rituals-matter",
+      "type": "tutorial",
+      "number": 3,
+      "day": "day1",
+      "title": "Why Rituals Matter: A Cross-Modal Framework for Consciousness Modulation",
+      "start": "10:00",
+      "end": "13:00",
+      "room": "Salon 203",
+      "chair": {
+        "name": "Aminata Bicego",
+        "affiliation": "Leiden University"
+      },
+      "speakers": [
+        {
+          "name": "Meredith Sprengel",
+          "affiliation": "Leiden University"
+        },
+        {
+          "name": "Chloe Pronovost-Morgan",
+          "affiliation": "McGill University"
+        },
+        {
+          "name": "Josh Brahinsky",
+          "affiliation": "McGill University"
+        },
+        {
+          "name": "Aminata Bicego",
+          "affiliation": "Leiden University"
+        }
+      ]
+    },
+    {
+      "id": "d1-tut-4",
+      "slug": "tutorial-4-integrated-information-theory",
+      "type": "tutorial",
+      "number": 4,
+      "day": "day1",
+      "title": "Integrated Information Theory",
+      "start": "10:00",
+      "end": "13:00",
+      "room": "Sala Cecilia Perez",
+      "chair": {
+        "name": "William Marshall",
+        "affiliation": "Brock University"
+      },
+      "speakers": [
+        {
+          "name": "William Marshall",
+          "affiliation": "Brock University"
+        },
+        {
+          "name": "Melanie Boly",
+          "affiliation": "University of Wisconsin-Madison"
+        }
+      ]
+    },
+    {
+      "id": "d1-opening",
+      "slug": "opening-ceremony",
+      "type": "special",
+      "day": "day1",
+      "title": "Opening Ceremony",
+      "start": "15:00",
+      "end": "15:30",
+      "room": "Salon Fresno"
+    },
+    {
+      "id": "d1-key-1",
+      "slug": "keynote-1-melloni",
+      "type": "keynote",
+      "number": 1,
+      "day": "day1",
+      "title": "Testing Theories, Expanding Minds: Lessons Learned and Challenges Ahead",
+      "start": "15:30",
+      "end": "16:30",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Lucia Melloni",
+          "affiliation": "Ruhr University Bochum"
+        }
+      ],
+      "bio": "Dr. Lucia Melloni received her PhD in Psychology from the Universidad Católica in Santiago, having conducted part of her doctoral research at the Max Planck Institute for Brain Research in Frankfurt. She is Principal Investigator and head of the Predictive Brain Department at Ruhr-Universität Bochum, with appointments at NYU Grossman School of Medicine and the CIFAR Brain, Mind & Consciousness Program. Her lab studies the neural underpinnings of perception, consciousness, and memory using intracranial (ECoG, laminar), neuroimaging, and mobile real-world recording methods. She is a leading architect of adversarial collaboration in consciousness science, co-founding the Cogitate Consortium."
+    },
+    {
+      "id": "d1-presidential",
+      "slug": "presidential-address-nobre",
+      "type": "keynote",
+      "day": "day1",
+      "title": "Presidential Address — Focusing attention within and between perception and memory",
+      "start": "16:30",
+      "end": "17:30",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Kia Nobre",
+          "affiliation": "Yale University"
+        }
+      ],
+      "bio": "Kia Nobre is a cognitive neuroscientist at Yale University, where she directs the Center for Neurocognition and Behavior at the Wu Tsai Institute. Her research examines how the brain dynamically and proactively prioritizes and selects information from the sensory stream and from memories to form psychological experience and guide behavior. She obtained her PhD at Yale (1993) and did postdoctoral research at Harvard Medical School. Before returning to Yale (2023) she spent ~30 years at the University of Oxford. She is President of the ASSC."
+    },
+    {
+      "id": "d1-reception",
+      "slug": "welcoming-reception",
+      "type": "special",
+      "day": "day1",
+      "title": "Welcoming Reception",
+      "start": "17:30",
+      "end": "20:30",
+      "room": "Plaza",
+      "note": "Please wear your name badge. Drinks and canapés."
+    },
+    {
+      "id": "d2-sym-1",
+      "slug": "symposium-1-perturbing-consciousness",
+      "type": "symposium",
+      "number": 1,
+      "day": "day2",
+      "title": "Perturbing Consciousness: Neuromodulation Approaches From Molecules to Circuits",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Salon Fresno",
+      "note": "Speaker line-up not listed in the program PDF — add from the on-site programme."
+    },
+    {
+      "id": "d2-sym-2",
+      "slug": "symposium-2-dementia-as-a-disorder-of-consciousness",
+      "type": "symposium",
+      "number": 2,
+      "day": "day2",
+      "title": "Dementia As A Disorder of Consciousness",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Aula Magna",
+      "note": "Speaker line-up not listed in the program PDF — add from the on-site programme."
+    },
+    {
+      "id": "d2-key-2",
+      "slug": "keynote-2-macshine",
+      "type": "keynote",
+      "number": 2,
+      "day": "day2",
+      "title": "The Neurobiological Basis of Consciousness",
+      "start": "11:30",
+      "end": "12:30",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "James Mac Shine",
+          "affiliation": "University of Sydney"
+        }
+      ],
+      "bio": "James Mac Shine is a Professor of Systems Neuroscience at The University of Sydney. His group maps mechanistic neurobiological models to dynamical network signatures estimated from functional neuroimaging. He completed his PhD at Sydney and postdoctoral work at Stanford, developing approaches for tracking whole-brain network dynamics. He is a joint NHMRC/Bellberry fellow."
+    },
+    {
+      "id": "d2-poster-1",
+      "slug": "poster-session-1",
+      "type": "poster",
+      "number": 1,
+      "day": "day2",
+      "title": "Poster Session 1",
+      "start": "12:30",
+      "end": "17:00",
+      "room": "Plaza (University Plaza)",
+      "note": "Available 12:30–14:00 and 16:00–17:00 (coffee 16:00–17:00). ~52 posters (P1-001…). Full poster list: data/source/fullprogram.txt (POSTER SESSION 1).",
+      "posterCount": 52
+    },
+    {
+      "id": "d2-cs-1",
+      "slug": "concurrent-01-disorders-of-consciousness-i",
+      "type": "concurrent",
+      "number": 1,
+      "day": "day2",
+      "title": "Disorders of Consciousness I",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Intensive Rehabilitation Program for Disorders of Consciousness: Evaluation of Care Processes and Clinical Outcomes",
+          "presenter": "Maria Elisa Rivas"
+        },
+        {
+          "title": "Predicting Recovery of Consciousness from Brain-Heart Interactions in Severe Brain Injury",
+          "presenter": "Genavieve Maloney"
+        },
+        {
+          "title": "Recovering trajectories after acute brain injury: a prospective study from ICU to prolonged follow-up",
+          "presenter": "Clémence Bobichon"
+        },
+        {
+          "title": "Deep Brain Stimulation of the Centromedian–Parafascicular Complex in a Minimally Conscious Patient: Entropy and Predictive Processing Markers of Residual Consciousness",
+          "presenter": "Maria Jose Danyau"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-2",
+      "slug": "concurrent-02-psychedelics-i",
+      "type": "concurrent",
+      "number": 2,
+      "day": "day2",
+      "title": "Psychedelics I",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Frequency-Resolved Reorganization of the Brain's Functional Repertoire under DMT Links Neural Dynamics to Psychedelic Experience",
+          "presenter": "Giovanni Rabuffo"
+        },
+        {
+          "title": "Digital Meditation-Based Preparation for Psilocybin: A Randomised Feasibility Trial",
+          "presenter": "Joanna Kuc"
+        },
+        {
+          "title": "EEG correlates of self-dissolution induced by intranasal 5-MeO-DMT",
+          "presenter": "Tommaso Barba"
+        },
+        {
+          "title": "High-order brain interactions in ketamine during rest and task: a double-blinded cross-over design using portable EEG on male participants",
+          "presenter": "Rubén Herzog"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-3",
+      "slug": "concurrent-03-metacognition-confidence",
+      "type": "concurrent",
+      "number": 3,
+      "day": "day2",
+      "title": "Metacognition & Confidence",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Iconic versus working memory metacognition to evaluate the richness of perception: a registered report",
+          "presenter": "Nicolás Comay"
+        },
+        {
+          "title": "Metacognition Beyond Conscious Access: Positive Evidence Bias as a Computationally Optimal Consequence of High-Dimensional Bayesian Inference",
+          "presenter": "Wiktoria Kozyra"
+        },
+        {
+          "title": "Masked subliminal visual priming reduces subjective confidence without changing objective performance",
+          "presenter": "Sebastián Rojas"
+        },
+        {
+          "title": "Confidence as a Social Signal: How Children Coordinate Subjective Certainty in Collaborative Perceptual Decision-Making",
+          "presenter": "Francisca Matias"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-4",
+      "slug": "concurrent-04-philosophy-of-mind-i",
+      "type": "concurrent",
+      "number": 4,
+      "day": "day2",
+      "title": "Philosophy of Mind I",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon 404",
+      "talks": [
+        {
+          "title": "The Hard Problem Presupposes Mechanistic Exhaustiveness",
+          "presenter": "Nicolas Loerbroks"
+        },
+        {
+          "title": "Value encroachment in consciousness science",
+          "presenter": "Niccolo Negro"
+        },
+        {
+          "title": "Mind uploading, Artificial Consciousness and Multiple Realization",
+          "presenter": "Sergio Barberis"
+        },
+        {
+          "title": "Dimensions of the phenomenal space and dynamics of its structure",
+          "presenter": "Léa Moncoucy"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-5",
+      "slug": "concurrent-05-disorders-of-consciousness-ii",
+      "type": "concurrent",
+      "number": 5,
+      "day": "day2",
+      "title": "Disorders of Consciousness II",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Emergence and occupation of dynamical brain states in Disorders of Consciousness, an empirical and simulation study",
+          "presenter": "Patricio Orio"
+        },
+        {
+          "title": "Ictal Memory and Relationship to Consciousness in Focal Epilepsy",
+          "presenter": "Nuria Campora"
+        },
+        {
+          "title": "Baseline EEG Criticality Predicts Perturbational Complexity in Disorders of Consciousness",
+          "presenter": "Derek Newman"
+        },
+        {
+          "title": "Detecting covert awareness using functional near-infrared spectroscopy",
+          "presenter": "Karnig Kazazian"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-6",
+      "slug": "concurrent-06-meditation-contemplative-states",
+      "type": "concurrent",
+      "number": 6,
+      "day": "day2",
+      "title": "Meditation & Contemplative States",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Neurophysiological Signatures of Real-time Meditative Depth in Expert Vipassana Practitioners",
+          "presenter": "Mihir Nath"
+        },
+        {
+          "title": "What can meditative experience tell us about affective valence? A computational perspective on the determinants of affect",
+          "presenter": "Shawn Prest"
+        },
+        {
+          "title": "Nondual mindfulness meditation alters bodily self representation and brain connectome in novice and expert meditators",
+          "presenter": "Antoine Lutz"
+        },
+        {
+          "title": "Approaching Critical Dynamics through Advanced Concentrative Absorption: Whole-Brain Modelling of Jhāna Meditation",
+          "presenter": "Jakub Vohryzek"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-7",
+      "slug": "concurrent-07-mental-imagery-vividness",
+      "type": "concurrent",
+      "number": 7,
+      "day": "day2",
+      "title": "Mental Imagery & Vividness",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Mental imagery and vision share a common representational space",
+          "presenter": "Laurence Lessard"
+        },
+        {
+          "title": "Predicting the Vividness of Imagined Natural Scenes from Visual Content",
+          "presenter": "Catherine Landry"
+        },
+        {
+          "title": "The impact of mental imagery and sensory sensitivity on visual perception",
+          "presenter": "Katerina Christodoulou"
+        },
+        {
+          "title": "What We Talk About When We Talk About Vividness",
+          "presenter": "Xueyi Huang"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-8",
+      "slug": "concurrent-08-ai-machine-consciousness",
+      "type": "concurrent",
+      "number": 8,
+      "day": "day2",
+      "title": "AI & Machine Consciousness",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon 404",
+      "talks": [
+        {
+          "title": "Beyond Behavioral Mimicry: Computational Evidence for the Dissociation of Cognitive Function and Consciousness Markers in LLM-Analog Architecture",
+          "presenter": "Andrey Vlasov"
+        },
+        {
+          "title": "Goal directed Attention and Awareness in VLMs and Humans",
+          "presenter": "Isaac Christian"
+        },
+        {
+          "title": "The moral standing of AI selves",
+          "presenter": "Andrew Bailey"
+        },
+        {
+          "title": "ElephantRoom: An Open Platform for Structured Comparison of Consciousness Theories",
+          "presenter": "Earnest Carr"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-9",
+      "slug": "concurrent-09-anesthesia-loss-of-consciousness",
+      "type": "concurrent",
+      "number": 9,
+      "day": "day2",
+      "title": "Anesthesia & Loss of Consciousness",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Hierarchical Breakdown of Directed Information Flow during Loss and Recovery of Responsiveness under Propofol",
+          "presenter": "Elvira Garcia Guzman"
+        },
+        {
+          "title": "Global brain pattern transitions under anesthesia in zebrafish larvae",
+          "presenter": "Verónica Pérez Schuster"
+        },
+        {
+          "title": "Integrated information decomposition reveals state- and condition-dependent brain information dynamics in sleep and anesthesia: a high-density EEG study",
+          "presenter": "Joaquim Streicher"
+        },
+        {
+          "title": "Remifentanil enhances propofol hypnotic effects and flattens the EEG aperiodic exponent before loss of consciousness",
+          "presenter": "Jose Egaña"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-10",
+      "slug": "concurrent-10-psychedelics-ii",
+      "type": "concurrent",
+      "number": 10,
+      "day": "day2",
+      "title": "Psychedelics II",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Acute Subanesthetic Ketamine Induces Large-Scale Reorganization of Functional Networks in the Rat Brain",
+          "presenter": "Claudia Pascovich"
+        },
+        {
+          "title": "Musical expression in psychedelic altered states: objective markers from naturalistic improvisation",
+          "presenter": "Stephanie Müller"
+        },
+        {
+          "title": "Investigating Emotional Reactivity in Experienced Users of Psychedelics: a cross-sectional fMRI study",
+          "presenter": "Paweł Orłowski"
+        },
+        {
+          "title": "Psilocybin Modulates Inter-Subject Neural Synchrony During Naturalistic Music Listening: Preliminary EEG Evidence",
+          "presenter": "Laura De La Fuente"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-11",
+      "slug": "concurrent-11-schizophrenia-psychosis-affect",
+      "type": "concurrent",
+      "number": 11,
+      "day": "day2",
+      "title": "Schizophrenia, Psychosis & Affect",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Nothing is neutral: behavioral and neural evidence of micro-valence",
+          "presenter": "Inès Mentec"
+        },
+        {
+          "title": "Disrupted Emotional Neural Synchrony in Schizophrenia Revealed by Intersubject Correlation of Naturalistic fMRI",
+          "presenter": "Tomas Jatatz"
+        },
+        {
+          "title": "Symptoms of Schizophrenia Spectrum Disorders Shape Conceptual Representations in the Brain",
+          "presenter": "Arina Ujevco"
+        },
+        {
+          "title": "Novel Sequential (Trial-History) Effect Model predicts criterion setting noise as a function of instability of indicator traces in psychosis",
+          "presenter": "Marianne Broeker"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-12",
+      "slug": "concurrent-12-philosophy-of-mind-ii",
+      "type": "concurrent",
+      "number": 12,
+      "day": "day2",
+      "title": "Philosophy of Mind II",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon 404",
+      "talks": [
+        {
+          "title": "The low of the high of it: The prospects for the PFC-HOT unified theory of consciousness",
+          "presenter": "Benjamin Kozuch"
+        },
+        {
+          "title": "Empirical support for a multi-stage model of conscious perception",
+          "presenter": "Michael Pitts"
+        },
+        {
+          "title": "Machines, Animals, and the Limits of Pragmatism in Consciousness Science",
+          "presenter": "Jovan Stojkovski"
+        },
+        {
+          "title": "Explanatory direction, mathematical phenomenology and a formal analysis of lived experiential structure",
+          "presenter": "Camilo Miguel Signorelli"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-13",
+      "slug": "concurrent-13-sleep-dreaming-lucidity",
+      "type": "concurrent",
+      "number": 13,
+      "day": "day2",
+      "title": "Sleep, Dreaming & Lucidity",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "A pattern across subcortical arousal regulatory regions precedes sleep-wake transitions in humans",
+          "presenter": "Nicholas Cicero"
+        },
+        {
+          "title": "lucid dreaming modulates the cardio-visual enfacement illusion",
+          "presenter": "Grandolfo Giacomina"
+        },
+        {
+          "title": "Anesthesia-Induced Dreaming: Phenomenology, Neural Correlates, and Therapeutic Potential",
+          "presenter": "Pilleriin Sikka"
+        },
+        {
+          "title": "The relationship between attentional control, metacognition, and different aspects of lucid dreaming",
+          "presenter": "Ewa Wiwatowska"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-14",
+      "slug": "concurrent-14-meditation-meaning-phenomenology",
+      "type": "concurrent",
+      "number": 14,
+      "day": "day2",
+      "title": "Meditation, Meaning & Phenomenology",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Leveraging Aesthetic Chills-Inducing Stimuli to Augment Contemplative Practice: Evidence from Loving-Kindness Meditation and Prayer",
+          "presenter": "Mordechai Walder"
+        },
+        {
+          "title": "Meditation-related alterations to conscious experience: prevalence, predictors, and meaning-making in a mixed-method investigation",
+          "presenter": "Julieta Galante"
+        },
+        {
+          "title": "Deep meditative deconstruction: Modelling “letting go” to minimal phenomenal experiences and cessations of consciousness with active inference",
+          "presenter": "Shawn Prest"
+        },
+        {
+          "title": "Is There a Conscious State Without Conscious Content? A Scoping Review of Definitions, Phenomenology and Empirical Findings",
+          "presenter": "Nicolò Silvestrini"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-15",
+      "slug": "concurrent-15-auditory-multisensory-awareness",
+      "type": "concurrent",
+      "number": 15,
+      "day": "day2",
+      "title": "Auditory & Multisensory Awareness",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Identifying neural correlates of auditory perceptual awareness and deviance using a no-report inattentional deafness paradigm",
+          "presenter": "Andrew Dykstra"
+        },
+        {
+          "title": "Reduction of Auditory N1 and P2 Responses During Misophonia, ASMR, and Musical Chills Videos",
+          "presenter": "Joel Snyder"
+        },
+        {
+          "title": "Cross-frequency interactions reveal synergistic and redundant information about perceptual content across sensory modalities and species",
+          "presenter": "Andres Canales-Johnson"
+        },
+        {
+          "title": "Temporal Congruency Drives the Multisensory Integration of Interoceptive and Exteroceptive Information",
+          "presenter": "Caroline Mclaughlin"
+        }
+      ]
+    },
+    {
+      "id": "d2-cs-16",
+      "slug": "concurrent-16-brain-networks-mechanisms",
+      "type": "concurrent",
+      "number": 16,
+      "day": "day2",
+      "title": "Brain Networks & Mechanisms",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon 404",
+      "talks": [
+        {
+          "title": "The hippocampus as a cortical broadcaster across altered states of consciousness",
+          "presenter": "Pablo-Alexandre Mallaroni"
+        },
+        {
+          "title": "Beyond the Thalamic Bottleneck: The Ventral Extrathalamic Pathway and the Brainstem Scaffold of Basic Conscious Experience",
+          "presenter": "Lukasz Kurowski"
+        },
+        {
+          "title": "The Case for a Spatially-Continuous, Subcortical Locus of Consciousness",
+          "presenter": "Daniel Freeman"
+        },
+        {
+          "title": "Bridging Cellular, Circuit, and Network Mechanisms in Consciousness and Its Disorders: A Computational Framework",
+          "presenter": "Valerii Brahin"
+        }
+      ]
+    },
+    {
+      "id": "d2-social",
+      "slug": "student-social",
+      "type": "special",
+      "day": "day2",
+      "title": "Student Social (optional)",
+      "start": "20:30",
+      "end": "",
+      "room": "Casa Conejo, Brown Norte 10, Ñuñoa",
+      "note": "Optional. Light snacks and a beverage included."
+    },
+    {
+      "id": "d3-sym-3",
+      "slug": "symposium-3-neuroethological-science",
+      "type": "symposium",
+      "number": 3,
+      "day": "day3",
+      "title": "A Neuroethological Science of Consciousness: Integrating Mechanism, Development, Evolution, and Function",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Salon Fresno",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d3-sym-4",
+      "slug": "symposium-4-brainweb-2",
+      "type": "symposium",
+      "number": 4,
+      "day": "day3",
+      "title": "The Brainweb 2.0: Large-Scale Neural Integration and Consciousness, 25 Years On",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Aula Magna",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d3-key-3",
+      "slug": "keynote-3-bekinschtein",
+      "type": "keynote",
+      "number": 3,
+      "day": "day3",
+      "title": "Beyond Neural Correlates: Towards a Dynamic Neurophenomenology of Consciousness",
+      "start": "11:30",
+      "end": "12:30",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Tristan Bekinschtein",
+          "affiliation": "University of Cambridge"
+        }
+      ],
+      "bio": "Tristan Bekinschtein is an Anglo-Argentinean biologist (Master in Neurophysiology, PhD in neuroscience, Buenos Aires University). He is a university professor and Turing Fellow at Cambridge, known for his work on variable states of consciousness and auditory feedback. He runs the Consciousness and Cognition Laboratory at Cambridge."
+    },
+    {
+      "id": "d3-poster-2",
+      "slug": "poster-session-2",
+      "type": "poster",
+      "number": 2,
+      "day": "day3",
+      "title": "Poster Session 2",
+      "start": "12:30",
+      "end": "17:00",
+      "room": "Plaza (University Plaza)",
+      "note": "Available 12:30–14:00 and 16:00–17:00 (coffee 16:00–17:00). ~49 posters (P2-001…). Full poster list: data/source/fullprogram.txt (POSTER SESSION 2).",
+      "posterCount": 49
+    },
+    {
+      "id": "d3-sym-5",
+      "slug": "symposium-5-covert-measures",
+      "type": "symposium",
+      "number": 5,
+      "day": "day3",
+      "title": "Covert Measures of Consciousness",
+      "start": "14:00",
+      "end": "16:00",
+      "room": "Salon Fresno",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d3-sym-6",
+      "slug": "symposium-6-aphantasia",
+      "type": "symposium",
+      "number": 6,
+      "day": "day3",
+      "title": "Aphantasia and Consciousness",
+      "start": "14:00",
+      "end": "16:00",
+      "room": "Aula Magna",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d3-key-4",
+      "slug": "keynote-4-kuypers",
+      "type": "keynote",
+      "number": 4,
+      "day": "day3",
+      "title": "Two non-overlapping probes for psychedelic mechanisms: Low-dose pharmacology and high-ventilation breathwork",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Kim Kuypers",
+          "affiliation": "Maastricht University"
+        }
+      ],
+      "bio": "Kim P.C. Kuypers is an Associate Professor at Maastricht University and Head of the Department of Neuropsychology and Psychopharmacology. Her research focuses on the effects of psychedelics and breathwork, using experimental controlled designs and survey-based methods, aiming to advance personalized psychedelic-assisted interventions and mental well-being."
+    },
+    {
+      "id": "d3-career",
+      "slug": "career-panel",
+      "type": "special",
+      "day": "day3",
+      "title": "Career Panel Meeting",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Anat Arzi",
+          "affiliation": "Hebrew University of Jerusalem"
+        },
+        {
+          "name": "Tim Bayne",
+          "affiliation": "Monash University"
+        },
+        {
+          "name": "Nicola Clayton",
+          "affiliation": "University of Cambridge"
+        },
+        {
+          "name": "Ruben Laukkonen",
+          "affiliation": "University of Oxford"
+        },
+        {
+          "name": "Nicco Reggente",
+          "affiliation": "Institute for Advanced Consciousness Studies"
+        }
+      ]
+    },
+    {
+      "id": "d3-drinks",
+      "slug": "conference-drinks-social",
+      "type": "special",
+      "day": "day3",
+      "title": "Conference Drinks & Appetizers Social (optional)",
+      "start": "20:00",
+      "end": "00:00",
+      "room": "El Bajo, Av. Libertador B. O'Higgins 227 (inside GAM Cultural Center)",
+      "note": "Optional. Pre-registration required. Food station and drinks."
+    },
+    {
+      "id": "d4-sym-7",
+      "slug": "symposium-7-subcortical-regions",
+      "type": "symposium",
+      "number": 7,
+      "day": "day4",
+      "title": "Subcortical Regions and Consciousness",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Salon Fresno",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d4-sym-8",
+      "slug": "symposium-8-consciousness-and-pregnancy",
+      "type": "symposium",
+      "number": 8,
+      "day": "day4",
+      "title": "Consciousness and pregnancy: One body, two brains",
+      "start": "09:00",
+      "end": "11:00",
+      "room": "Aula Magna",
+      "note": "Speaker line-up not listed in the program PDF."
+    },
+    {
+      "id": "d4-key-5",
+      "slug": "keynote-5-de-brigard",
+      "type": "keynote",
+      "number": 5,
+      "day": "day4",
+      "title": "That couldn't have happened: Perceived plausibility in episodic counterfactual thinking",
+      "start": "11:30",
+      "end": "12:30",
+      "room": "Salon Fresno",
+      "speakers": [
+        {
+          "name": "Felipe De Brigard",
+          "affiliation": "Duke University"
+        }
+      ],
+      "bio": "Felipe De Brigard is Professor in Philosophy, Psychology & Neuroscience and the Center for Cognitive Neuroscience at Duke University, and PI of the Imagination and Modal Cognition Laboratory (IMC Lab). His research focuses on memory and its relations to perception, imagination, attention and consciousness, as well as the foundations of neuroscience and moral psychology."
+    },
+    {
+      "id": "d4-poster-3",
+      "slug": "poster-session-3",
+      "type": "poster",
+      "number": 3,
+      "day": "day4",
+      "title": "Poster Session 3",
+      "start": "12:30",
+      "end": "17:00",
+      "room": "Plaza (University Plaza)",
+      "note": "Available 12:30–14:00 and 16:00–17:00 (coffee 16:00–17:00). ~52 posters (P3-001…). Full poster list: data/source/fullprogram.txt (POSTER SESSION 3).",
+      "posterCount": 52
+    },
+    {
+      "id": "d4-cs-17",
+      "slug": "concurrent-17-psychedelics-sleep-placebo",
+      "type": "concurrent",
+      "number": 17,
+      "day": "day4",
+      "title": "Psychedelics, Sleep & Placebo",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Psychedelic Sleep: Insights from Research on Consciousness and Psilocybin Effects on Well-Being",
+          "presenter": "James Barlow"
+        },
+        {
+          "title": "Tripping on Placebo? The Role of Beliefs vs Capsule Content on Acute Subjective Effects in a Self-Blinding Microdosing Study",
+          "presenter": "Aleksandra Wingert"
+        },
+        {
+          "title": "Psilocybin and meditation-based preparation exert synergistic effects in reducing rumination",
+          "presenter": "Krisztina Jedlovszky"
+        },
+        {
+          "title": "Aesthetic Chills as an Accessible, Tunable Non-Ordinary State: From Neurophenomenological Mechanisms to Precision Therapeutics for Depression",
+          "presenter": "Nicco Reggente"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-18",
+      "slug": "concurrent-18-visual-consciousness-i",
+      "type": "concurrent",
+      "number": 18,
+      "day": "day4",
+      "title": "Visual Consciousness I",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Aula Magna",
+      "talks": [
+        {
+          "title": "Delays in neural representations of objects suppressed from awareness",
+          "presenter": "Jasmin Patel"
+        },
+        {
+          "title": "Characterizing early visual cortical responses to figure-ground stimuli as a tool for studying visual awareness",
+          "presenter": "Emil Olsson"
+        },
+        {
+          "title": "Causal modulation of objective and subjective visibility by beta-frequency tACS during metacontrast masking",
+          "presenter": "Carla Pallavicini"
+        },
+        {
+          "title": "The Shape of Awareness – Evidence for asymmetric transitions in Conscious perception",
+          "presenter": "Arpan Nayak"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-19",
+      "slug": "concurrent-19-self-body-interoception",
+      "type": "concurrent",
+      "number": 19,
+      "day": "day4",
+      "title": "Self, Body & Interoception",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Embodied Modulation of Attention: A Neurophenomenological Study of Basic Emotions",
+          "presenter": "Alejandra Vasquez-Rosati"
+        },
+        {
+          "title": "Hypnosis tunes respiratory prediction and feedback, reducing anxiety and improving oxygenation across health and disease",
+          "presenter": "Hernan Anllo"
+        },
+        {
+          "title": "Sentience-like processes are revealed in low arousal by employing interoceptive stimulation",
+          "presenter": "Paradeisios Boulakis"
+        },
+        {
+          "title": "Hypnotized into madness: Hypnotic suggestibility correlates with AI delusions",
+          "presenter": "Dasha Sandra"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-20",
+      "slug": "concurrent-20-computational-decision-neuroscience",
+      "type": "concurrent",
+      "number": 20,
+      "day": "day4",
+      "title": "Computational & Decision Neuroscience",
+      "start": "14:00",
+      "end": "15:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Mapping evidence accumulation dynamics during voluntary decisions using intracranial EEG",
+          "presenter": "Lauren Fong"
+        },
+        {
+          "title": "Statistical learning of event structure warps subjective time perception",
+          "presenter": "Qiyuan Zeng"
+        },
+        {
+          "title": "In search of consciousness lower bound: Biological underpinnings of synergy and integration underlying reversible loss of arousal in C. Elegans",
+          "presenter": "Diego Becerra"
+        },
+        {
+          "title": "Measuring Distance Between Phi-Structures",
+          "presenter": "Yu Togashi"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-21",
+      "slug": "concurrent-21-visual-consciousness-ii",
+      "type": "concurrent",
+      "number": 21,
+      "day": "day4",
+      "title": "Visual Consciousness II",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Unconscious eye contact detection at the limits of vision",
+          "presenter": "Renzo Lanfranco"
+        },
+        {
+          "title": "Auditory and visual perception modulate independently across the gait cycle",
+          "presenter": "Gabriel Clouston"
+        },
+        {
+          "title": "Using closed-loop image evolution to probe the neural correlates of subjective fear",
+          "presenter": "Darius Valevicius"
+        },
+        {
+          "title": "A structured parameter space for geometric visual hallucinations induced by stroboscopic light",
+          "presenter": "Trevor Hewitt"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-22",
+      "slug": "concurrent-22-attention-conscious-access",
+      "type": "concurrent",
+      "number": 22,
+      "day": "day4",
+      "title": "Attention & Conscious Access",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Aula Magna",
+      "talks": [
+        {
+          "title": "Conscious access to value: a prerequisite for adaptive decision-making? Insights from pupillometry",
+          "presenter": "Ivan Ivanchei"
+        },
+        {
+          "title": "Global Neural Oscillations Underlie Performance Variability and Attentional State Fluctuations in Humans",
+          "presenter": "Joaquín Herrero Silva"
+        },
+        {
+          "title": "Locomotion cyclically modulates sensory awareness at the step rate",
+          "presenter": "David Alais"
+        },
+        {
+          "title": "Discrete episodes of conscious access revealed with the psychological refractory period",
+          "presenter": "Alex Lepauvre"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-23",
+      "slug": "concurrent-23-neurological-conditions-consciousness",
+      "type": "concurrent",
+      "number": 23,
+      "day": "day4",
+      "title": "Neurological Conditions & Consciousness",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Decreased emergent information in Alzheimer's disease and cognitive impairment",
+          "presenter": "Keenan Down"
+        },
+        {
+          "title": "ComaRhythm: Early re-emergence of circadian physiology could be a biomarker of consciousness recovery in acute brain injury",
+          "presenter": "Maude Beaudoin"
+        },
+        {
+          "title": "On the Search for the Neural Correlates of Consciousness in Chronic Pain",
+          "presenter": "Alisson Brandemarte Moreira"
+        },
+        {
+          "title": "Motor Stability as a Marker of Covert Awareness in Disorders of Consciousness",
+          "presenter": "Gino Haase"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-24",
+      "slug": "concurrent-24-miscellaneous-integrative-i",
+      "type": "concurrent",
+      "number": 24,
+      "day": "day4",
+      "title": "Miscellaneous & Integrative Topics I",
+      "start": "15:00",
+      "end": "16:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "A mouse model of blindsight reveals a role for the hippocampus in putatively conscious vision",
+          "presenter": "Nikhil Bhatla"
+        },
+        {
+          "title": "The Structure and Function of Valence in Similarity Space",
+          "presenter": "Gabriel Brandolini"
+        },
+        {
+          "title": "The value of consciousness: Experiences worth having",
+          "presenter": "Axel Cleeremans"
+        },
+        {
+          "title": "Pharmacological and Pathological Loss of Consciousness Decouples Functional Connectivity from Cognition",
+          "presenter": "Jakub Vohryzek"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-25",
+      "slug": "concurrent-25-inner-speech-mind-wandering",
+      "type": "concurrent",
+      "number": 25,
+      "day": "day4",
+      "title": "Inner Speech, Mind-Wandering & Thought",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon Fresno",
+      "talks": [
+        {
+          "title": "Linguistic Phenomenology of Inner Speech During Rumination: An Experience Sampling Study",
+          "presenter": "Albane Buisson"
+        },
+        {
+          "title": "Variations in Inner Language and Conceptual Thought Experience",
+          "presenter": "Raquel Krempel"
+        },
+        {
+          "title": "Modeling the dynamics of experience",
+          "presenter": "George Denfield"
+        },
+        {
+          "title": "Subjective, Behavioral, and Electrophysiological Effects of Methylphenidate on Mind-Wandering",
+          "presenter": "Nicolás Bruno"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-26",
+      "slug": "concurrent-26-neural-dynamics-information-theory",
+      "type": "concurrent",
+      "number": 26,
+      "day": "day4",
+      "title": "Neural Dynamics & Information Theory",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Aula Magna",
+      "talks": [
+        {
+          "title": "Topological signatures of consciousness: Homological scaffolds in macaque and human brain networks",
+          "presenter": "Rodrigo Cofré"
+        },
+        {
+          "title": "An efficient and accessible library for computing higher-order interactions for consciousness research: an application to anesthesia",
+          "presenter": "Laouen Belloli"
+        },
+        {
+          "title": "Data-driven phenotyping of deconstructed consciousness",
+          "presenter": "Romy Beauté"
+        },
+        {
+          "title": "Information Dynamics of the Predictive Brain",
+          "presenter": "Juho Äijälä"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-27",
+      "slug": "concurrent-27-emotion-aesthetics-experience",
+      "type": "concurrent",
+      "number": 27,
+      "day": "day4",
+      "title": "Emotion, Aesthetics & Experience",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon 202",
+      "talks": [
+        {
+          "title": "Mortality-related content is associated with higher predicted visual memorability in paintings",
+          "presenter": "Tonghe Zhuang"
+        },
+        {
+          "title": "Evaluating reality: Centro-parietal activity tracks subjective unrealness",
+          "presenter": "Reina Van Der Goot"
+        },
+        {
+          "title": "How to catch a blank mind? Neural similarities and differences between self- and probe-caught mind blanking",
+          "presenter": "Agustina Aragón Daud"
+        },
+        {
+          "title": "Interoception and Affective Consciousness: From Neural Maps to Predictive Inference",
+          "presenter": "Julieta Zapata"
+        }
+      ]
+    },
+    {
+      "id": "d4-cs-28",
+      "slug": "concurrent-28-miscellaneous-integrative-ii",
+      "type": "concurrent",
+      "number": 28,
+      "day": "day4",
+      "title": "Miscellaneous & Integrative Topics II",
+      "start": "17:00",
+      "end": "18:00",
+      "room": "Salon 203",
+      "talks": [
+        {
+          "title": "Beyond seen vs unseen: time-resolved neural correlates of subjective experience",
+          "presenter": "Shiva Mahdian"
+        },
+        {
+          "title": "Toward a causal test of prefrontal-occipital functional connectivity during conscious access to visual stimuli: a dual-site tACS and EEG study",
+          "presenter": "Romain Lahbari"
+        },
+        {
+          "title": "The role of volitional control in distinguishing mental imagery from perception",
+          "presenter": "Giulia Cabbai"
+        },
+        {
+          "title": "Aesthetic Chills Increase Neural Complexity, Induce Self-Transcendence, and Enhance Prosociality",
+          "presenter": "Leonardo Christov-Moore"
+        }
+      ]
+    },
+    {
+      "id": "d4-closing",
+      "slug": "closing-remarks",
+      "type": "special",
+      "day": "day4",
+      "title": "Closing Remarks",
+      "start": "18:00",
+      "end": "19:00",
+      "room": "Salon Fresno"
+    },
+    {
+      "id": "d4-afterparty",
+      "slug": "after-conference-party",
+      "type": "special",
+      "day": "day4",
+      "title": "After Conference Party (optional)",
+      "start": "20:30",
+      "end": "00:00",
+      "room": "Bar Liguria, Merced 298",
+      "note": "Optional. Light snacks and a beverage provided."
+    }
+  ]
+}

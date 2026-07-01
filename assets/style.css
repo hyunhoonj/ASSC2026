@@ -1,0 +1,72 @@
+/* ASSC 29 conference notes companion — shared styles (mobile-first) */
+:root{
+  --bg:#0f1720; --card:#17222e; --card2:#1e2b39; --ink:#e8eef5; --muted:#9fb0c2;
+  --line:#2a3949; --accent:#3597D3; --accent2:#57c7b0; --warn:#e0b15a;
+  --tut:#8b7bd8; --key:#e0776a; --sym:#4aa3d6; --con:#57c7b0; --pos:#c99a4e; --spc:#8894a6;
+  --radius:14px; --maxw:820px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  padding:0 16px 64px;
+}
+.wrap{max-width:var(--maxw); margin:0 auto}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* top bar */
+.topbar{display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+  padding:16px 0 12px; border-bottom:1px solid var(--line); margin-bottom:20px; position:sticky; top:0; background:var(--bg); z-index:5}
+.topbar .home{font-weight:700; color:var(--ink)}
+.topbar .crumbs{color:var(--muted); font-size:14px}
+.topbar nav{margin-left:auto; display:flex; gap:14px; font-size:14px}
+
+/* hero / headers */
+h1{font-size:26px; line-height:1.25; margin:6px 0 10px}
+h2{font-size:19px; margin:30px 0 12px; padding-bottom:6px; border-bottom:1px solid var(--line)}
+.sub{color:var(--muted); margin:0 0 18px}
+.meta-row{display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:14px; margin:2px 0 18px}
+.meta-row b{color:var(--ink); font-weight:600}
+.pill{display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:700;
+  letter-spacing:.02em; text-transform:uppercase; color:#0f1720}
+.pill.tutorial{background:var(--tut)} .pill.keynote{background:var(--key)} .pill.symposium{background:var(--sym)}
+.pill.concurrent{background:var(--con)} .pill.poster{background:var(--pos)} .pill.special{background:var(--spc)}
+
+/* cards */
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin:12px 0}
+.card h3{margin:0 0 4px; font-size:16px}
+.card .who{color:var(--muted); font-size:14px}
+.talk{padding:12px 0; border-bottom:1px solid var(--line)}
+.talk:last-child{border-bottom:0}
+.talk .t{font-weight:600}
+.talk .p{color:var(--accent2); font-size:14px; margin-top:2px}
+.speakers{list-style:none; padding:0; margin:8px 0}
+.speakers li{padding:6px 0; border-bottom:1px dashed var(--line)}
+.speakers li:last-child{border-bottom:0}
+.speakers .aff{color:var(--muted); font-size:14px}
+.bio{color:#cdd8e4; font-size:15px; background:var(--card); border-left:3px solid var(--key); padding:10px 14px; border-radius:0 8px 8px 0}
+
+/* notes */
+.notes{background:var(--card2); border:1px solid var(--line); border-left:4px solid var(--accent2);
+  border-radius:0 var(--radius) var(--radius) 0; padding:6px 18px 14px; margin:14px 0; min-height:56px}
+.notes h2{border:0; margin:14px 0 6px; font-size:16px; color:var(--accent2)}
+.notes .empty{color:var(--muted); font-style:italic}
+
+/* day index grid */
+.slot{color:var(--muted); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin:22px 0 6px}
+.sess{display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line);
+  border-radius:12px; padding:12px 14px; margin:8px 0}
+.sess .time{min-width:104px; color:var(--muted); font-size:13px; font-variant-numeric:tabular-nums}
+.sess .body{flex:1}
+.sess .body .ttl{font-weight:600}
+.sess .body .rm{color:var(--muted); font-size:13px}
+.sess .status{font-size:12px; color:var(--muted); white-space:nowrap}
+.sess .status.ready{color:var(--accent2)}
+.grid-days{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0}
+@media(max-width:560px){.grid-days{grid-template-columns:1fr}}
+.dcard{display:block; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px}
+.dcard .d{font-size:13px; color:var(--muted)} .dcard .n{font-size:20px; font-weight:700; margin:2px 0}
+footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+.hint{background:rgba(224,177,90,.1); border:1px solid var(--warn); color:#f0dcb0; border-radius:10px; padding:10px 14px; font-size:14px; margin:14px 0}
