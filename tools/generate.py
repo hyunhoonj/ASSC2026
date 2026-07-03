@@ -188,6 +188,9 @@ def build_index(prog):
     body = ('<h1>%s</h1>\n<p class="sub">%s · %s · %s</p>\n'
             '<div class="meta-row"><span>📶 Wi-Fi <b>%s</b> / %s</span><span>🔗 <a href="%s">공식 프로그램</a></span></div>\n'
             '<div class="grid-days">%s</div>\n'
+            '<div class="grid-days"><a class="dcard" href="research-ideas.html">'
+            '<div class="d">메모장</div><div class="n">💡 연구 방향 아이디어</div>'
+            '<div class="d">학회에서 떠오른 연구 아이디어 모음 →</div></a></div>\n'
             '<div class="hint">세션 페이지는 필요할 때 만들어요. 폰이든 PC든 Claude Code에게 '
             '<b>“Day 2 Symposium 2 페이지 만들어줘”</b> 처럼 말하면 됩니다. 자세한 방식은 <code>CLAUDE.md</code> 참고.</div>'
             % (esc(c["name"]), esc(c["city"]), esc(c["venue"]), esc(c["dates"]),
