@@ -19,7 +19,21 @@
     <h2>📄 발표·초록 메모</h2>
     <!-- NOTES:abstract:START -->
     
-      <p class="empty">발표 내용 / 초록 요약을 여기에 (Claude에게 말하거나 이 파일을 직접 편집).</p>
+
+      <p><strong>Felipe De Brigard</strong> — 콜롬비아 출신 철학자이자 인지신경과학자. 현재 Duke University
+      <em>철학과 정교수</em>(2025~)이며 심리·신경과학, Center for Cognitive Neuroscience, Science &amp; Society에
+      겸직. <strong>Imagination and Modal Cognition Lab (IMC Lab, imclab.org)</strong>의 PI.
+      UNC-Chapel Hill 철학 박사(2011), 이후 하버드에서 Daniel Schacter와 함께 기억 연구.
+      Google Scholar 인용 약 5,900+.</p>
+
+      <p><strong>한 문장 요지:</strong> "기억은 과거를 <em>정확히 재생</em>하기 위한 장치가 아니라,
+      과거·미래·있을 법했던 일을 <em>유연하게 시뮬레이션</em>하는 하나의 시스템이 내놓는 여러 출력 중 하나다."
+      이 세션은 그 시스템이 <strong>있을 수 있었던 일(반사실)</strong>을 어떻게 다루는지, 특히
+      <strong>지각된 그럴듯함(perceived plausibility)</strong>이 기억·상상·뇌에 어떻게 작동하는지를 다룬다.</p>
+
+      <p class="cite">아래 &ldquo;내 메모&rdquo;는 발표 슬라이드 대신 De Brigard의 실제 논문들을 조사·검증해
+      주제별로 정리한 것. (출처는 각 항목의 저널/DOI로 확인.)</p>
+
     
     <!-- NOTES:abstract:END -->
   </section>
@@ -27,159 +41,208 @@
     <h2>📝 내 메모</h2>
     <!-- NOTES:mynotes:START -->
     
-      <h3>기억은 "재구성적(reconstructive)"이라는 게 무슨 뜻인가?</h3>
-      <ul>
-        <li><strong>거짓 기억은 무작위가 아니다</strong> → 스키마 일관성·요지(gist) 기반, 배경지식에 의존.
-          <span class="cite">[Brainerd &amp; Reyna, 2005; Roediger &amp; McDermott, 1995; Posner &amp; Keele, 1968; Koutstaal et al., 1999; Slotnick &amp; Schacter, 2004]</span></li>
-        <li><strong>스키마는 경험을 통해 획득된다.</strong> <span class="cite">[Castel et al., 2007]</span></li>
-        <li><strong>ACT-R 아키텍처</strong>: 과거 경험이 기억 재구성에 영향을 준다.
-          <span class="cite">[Anderson &amp; Bower, 1972; Huttenlocher et al., 2000]</span></li>
-        <li><strong>기억 재구성의 확률적 모델</strong>: 예측 오차(prediction error)를 최소화하는 방향으로 —
-          이전 지식과 현재 단서가 주어졌을 때 장면(scene 등)이 어땠을지에 대한 가설을 시험해 봄으로써.</li>
-      </ul>
 
-      <h3>기억 구성·응고화의 생성 모델 (generative model)</h3>
-      <ul>
-        <li><strong>Spens &amp; Burgess (2023), <em>Nature Human Behaviour</em></strong> — "A generative model of memory construction and consolidation".
-          <span class="cite">[doi.org/10.1038/s41562-023-01799-z]</span></li>
-        <li>구조: <strong>encoder ↔ latent variables ↔ decoder</strong>, sensory neocortex로 이어지는 오토인코더식 구조.
-          잠재변수를 거쳐 감각 피질 표상을 재구성.</li>
-        <li>확률적 추론 예시: 흐릿한 도로표지 단서를 놓고 <em>Stop / Yield / Kangaroo</em> 등 사전 분포 위에서
-          가장 그럴듯한 해석을 추론 — 사전 지식이 재구성을 결정.</li>
-        <li>참고: De Brigard, <em>Memory and Remembering</em> (Cambridge Elements: Philosophy of Mind).</li>
-      </ul>
+      <p><em>이 세션은 발표 슬라이드 필기 대신, 발표자 Felipe De Brigard의 연구 세계를 논문 중심으로 정리한다.
+      큰 그림 → 행동 연구 → 뇌 연구 → 그 밖의 연구 순서로 읽으면 자연스럽다.</em></p>
 
-      <h3>일어날 수 있었던 일을 기억하기 (Remembering what could have happened?)</h3>
-      <ul>
-        <li><strong>Hunch(직관):</strong> 거짓 기억은 무의식적/비자발적(unconscious·involuntary) 반사실
-          (counterfactual)일 수 있다.</li>
-        <li><strong>핵심 질문:</strong> 우리의 기억 시스템은 이런 종류의 <em>가정법(hypotheticals)</em>에
-          — 즉 <em>과거 개인 경험이 어땠을 수도 있었는지(how past personal experiences might have been)</em>에 대한
-          내용에 — 민감한가?</li>
-      </ul>
+      <hr>
+      <h2>① 큰 그림 — "기억은 재구성이다"</h2>
 
-      <h3>일화적 기억과 미래 사고: 비대칭성? (a possible asymmetry?)</h3>
+      <h3>대표 논문: 「Is memory for remembering?」 (Synthese, 2014)</h3>
       <ul>
-        <li>이중 원뿔(모래시계) 그림으로 시간축 위 일화적 사고를 배치:</li>
-        <li><strong>과거 쪽 원뿔</strong> — <em>실제 과거(Actual Past)</em> + <em>가능한 과거(Possible past)</em>.
-          가능한 과거를 다루는 것이 <strong>eCFT</strong> (일화적 반사실 사고, episodic counterfactual thinking).</li>
-        <li><strong>미래 쪽 원뿔</strong> — <em>가능한 미래(Possible future)</em>.
-          이를 다루는 것이 <strong>eFT</strong> (일화적 미래 사고, episodic future thinking).</li>
-        <li>둘을 아우르는 상위 범주: <strong>EHT</strong> (일화적 가정 사고, Episodic Hypothetical Thinking).</li>
-        <li>비대칭성 논점: 과거는 "실제+가능"을 모두 포함하지만 미래는 "가능"만 있음 → 기억/상상의 구조가 대칭이 아닐 수 있음.</li>
-      </ul>
-
-      <h3>eCFT의 신경 상관 (neural correlates)</h3>
-      <ul>
-        <li><strong>De Brigard, Addis, Ford, Schacter &amp; Giovanello (2013), <em>Neuropsychologia</em></strong>
-          — "Remembering what could have happened: Neural correlates of episodic counterfactual thinking".</li>
-        <li>관여 영역: <strong>Lateral Temporal Cortex</strong>, <strong>Precuneus + Lateral Parietal Cortex</strong>,
-          <strong>Retrosplenial</strong> — 기억 재구성/장면 구성 관련 네트워크(default network 계열).</li>
-        <li>분석: PLS의 <em>LV2 – Brain Score (with CI)</em>, 조건별(Remember / Likely / Unlikely / CTL) 대비.
-          그럴듯함(plausibility) 수준에 따라 뇌 반응이 갈림.</li>
-        <li>관련 연구: Weiler, Suchan &amp; Daum, <em>Hippocampus</em> — 상상한 미래 사건의 <em>발생 확률</em>이
-          해마 활성을 조절(Foreseeing the future occurrence probability … modulates hippocampal activation).
-          → 그럴듯함/확률이 기억·상상 회로에 반영된다는 증거.</li>
-      </ul>
-
-      <h3>기억 재활성화와 반사실 사고 (memory reactivation)</h3>
-      <ul>
-        <li><strong>De Brigard, Szpunar &amp; Addis, <em>Psychological Science</em> (SAGE)</strong>
-          — "Coming to Grips With the Past: Effect of Repeated Simulation on the Perceived Plausibility of Episodic Counterfactual Thoughts".</li>
-        <li>디자인: 같은 반사실 사고를 <strong>반복 시뮬레이션</strong>(First → Fourth Simulation)하며 평정.</li>
-        <li>측정: <em>Detail(세부)</em>, <em>Ease(용이함)</em>, <em>Plausibility(그럴듯함)</em> 세 지표.</li>
-        <li><strong>결과:</strong> 반복해서 떠올릴수록 세 지표 모두 상승 — 특히 <strong>반복 시뮬레이션이 지각된 그럴듯함을 높인다.</strong>
-          (단순 반복 상상만으로 "그럴 수 있었다"는 느낌이 강화됨 → 진실 착각/유창성 효과와 연결.)</li>
-      </ul>
-
-      <h3>반사실의 종류에 따른 신경 활동 (self / other / object)</h3>
-      <ul>
-        <li><strong>De Brigard, Spreng, Mitchell &amp; Schacter, <em>NeuroImage</em></strong>
-          — "Neural activity associated with self, other, and object-based counterfactual thinking".</li>
-        <li>반사실의 대상에 따라 뇌 반응이 갈림:
-          <strong>Person-based counterfactuals</strong>(자기/타인 관련)와
-          <strong>Object-based counterfactuals</strong>가 서로 다른 네트워크를 동원.</li>
-        <li>시간 경과(TR 4 → TR 5)에 따라 활성 패턴이 변함 — 반사실 구성이 동적 과정임을 시사.</li>
-      </ul>
-
-      <h3>의미적 vs 일화적 반사실 사고 (What if?)</h3>
-      <ul>
-        <li><strong>Parikh, Ruzic, Stewart, Spreng &amp; De Brigard (2018), <em>NeuroImage</em></strong>
-          — "What if? Neural activity underlying semantic and episodic counterfactual thinking".</li>
-        <li><strong>Semantic CFT</strong>와 <strong>Episodic CFT</strong>가 <em>구분되는 신경 기반</em>을 가짐:
-          의미적 반사실은 의미 네트워크(외측 측두 등), 일화적 반사실은 일화 기억/장면 구성 네트워크(해마·후측 영역)를 더 동원.</li>
-        <li>→ "반사실 사고"는 단일 과정이 아니라 일반적(의미적) 지식 기반과 구체적(일화적) 재구성이 분리됨.</li>
-      </ul>
-
-      <h3>정리: Episodic Counterfactual Thinking (리뷰)</h3>
-      <ul>
-        <li><strong>De Brigard &amp; Parikh, <em>Current Directions in Psychological Science</em> (2019, SAGE)</strong>
-          — "Episodic Counterfactual Thinking".</li>
-        <li>2차원 도식: 세로축 <em>Actual → Possible → Impossible</em>(양상/가능성),
-          가로축 <em>Past ↔ Future</em> + <em>Episodic ↔ Semantic</em> — eCFT를 이 공간 안에 위치시킴.</li>
-        <li>eCFT의 신경 상관을 자기/타인/대상, 의미/일화 대비로 종합 — default network·MTL 중심.</li>
-      </ul>
-
-      <h3>★ 그럴듯함이 해마 활동을 조절 (핵심 결과)</h3>
-      <ul>
-        <li><strong>Miceli, Morales-Torres, Parikh, Khoudary, Faul &amp; De Brigard</strong>
-          — "Perceived plausibility modulates hippocampal activity in episodic counterfactual thinking".</li>
-        <li>분석: <em>Plausibility Modulation</em>의 파라미터 추정치를 해마 하위영역별로 비교, 두 실험(Exp 1·2)에서 반복 검증.</li>
-        <li><strong>좌/우:</strong> <strong>왼쪽 해마(Left)</strong>에서 그럴듯함 조절 효과가 유의(*), 두 실험 모두 재현.</li>
-        <li><strong>전/후:</strong> <strong>전측 해마(Anterior)</strong>에서 효과가 유의(*), 후측(Posterior)보다 큼 — 두 실험 재현.</li>
-        <li><strong>해석:</strong> 반사실이 <em>그럴듯할수록</em> (특히 좌측·전측) 해마 활동이 증가 →
-          지각된 그럴듯함이 기억 재구성 회로(해마)에 직접 반영됨. 발표 제목("That couldn't have happened")의 실증 근거.</li>
-      </ul>
-
-      <h3>일화적 미래 시뮬레이션의 기억 (배경)</h3>
-      <ul>
-        <li>상상한 사람은 사물·장소보다 더 잘 기억됨. <span class="cite">[Szpunar, Addis &amp; Schacter, 2012]</span></li>
-        <li>긍정적 시뮬레이션이 부정적 시뮬레이션보다 일화적 세부가 더 잘 기억됨.</li>
-        <li>eFT는 <em>친숙한(경험된) 구성요소</em>로 조립될수록 더 상세하고 그럴듯하게 기억됨. <span class="cite">[McClelland et al., 2015]</span></li>
-        <li>단서회상 vs 자유회상: 사람·장소가 사물·행위보다 더 잘 기억됨. <span class="cite">[Jeunehomme &amp; D'Argembeau, 2017]</span></li>
-        <li>자신의 인생 목표에 통합된 시뮬레이션일수록 회상이 더 좋음. <span class="cite">[Ben Malek, Berna &amp; D'Argembeau, 2017; 2018]</span></li>
-      </ul>
-
-      <h3>그럴듯한 반사실이 더 잘 기억된다 (Morales-Torres 2025)</h3>
-      <ul>
-        <li><strong>Morales-Torres, Miceli, Huang, Szpunar &amp; De Brigard (2025), <em>Psychonomic Bulletin &amp; Review</em></strong>
-          — "Episodic details are better remembered in plausible relative to implausible counterfactual simulations".
-          <span class="cite">[doi.org/10.3758/s13423-025-02670-0]</span></li>
-        <li>디자인: 3세션(7일·1일 간격). Session 1 사건 부호화 → Session 2에서 반사실 시뮬레이션 생성 후
-          <em>Plausibility·Vividness·Valence·Difficulty</em> 평정 → Session 3 회상 검사.</li>
-        <li>조작: 반사실 방향을 <em>Upward(더 나은) / Downward(더 나쁜) / Neutral</em>로 구분.</li>
-        <li><strong>결과:</strong> <em>그럴듯한(plausible)</em> 반사실일수록 일화적 세부가 더 잘 기억됨 —
-          그럴듯함(Plausibility)이 기억과 유의한(*) 정적 관계. (Upward vs Downward/Neutral 대비에서도 확인.)</li>
-      </ul>
-
-      <h3>이게 그냥 "노력(effort)" 때문인가? (반론 검토)</h3>
-      <ul>
-        <li><strong>Morales-Torres, Miceli &amp; De Brigard (2026), <em>Cognition</em> 271:106424</strong>
-          — "Plausibility in episodic counterfactual thinking does not depend on the difficulty of the mental simulation".</li>
-        <li>검증할 대안 가설(삼단논법):
+        <li><strong>De Brigard, F. (2014).</strong> "Is memory for remembering? Recollection as a form of
+          episodic hypothetical thinking." <em>Synthese</em> 191(2), 155–185. <span class="cite">그의 최다 인용 논문(~510).</span></li>
+        <li><strong>핵심 뒤집기:</strong> 보통 우리는 기억의 임무가 "과거를 정확히 복원"하는 것이고,
+          잘못 기억하면 <em>고장</em>이라고 본다. De Brigard는 이걸 뒤집는다 — 오기억(misremembering)은
+          예측 가능하고 규칙적이며, <strong>버그가 아니라 시스템이 원래 하도록 만들어진 일의 흔적</strong>이다.</li>
+        <li><strong>왜 기억과 상상이 한 시스템인가:</strong> 뇌는 저장된 경험 조각을 <em>유연하게 재조합</em>해
+          새 장면을 만든다. 미래를 상상하는 것도, 대안적 과거를 떠올리는 것도, 기억을 떠올리는 것도
+          모두 같은 재조합 엔진의 산물. 그래서 그럴듯한-그러나-틀린 세부(gist 침입)가 쉽게 생긴다 —
+          상상을 가능케 하는 바로 그 유연함이 체계적 오기억을 불가피하게 만든다.</li>
+        <li><strong>EHT(일화적 가정 사고, Episodic Hypothetical Thinking):</strong> 실제일 필요 없는
+          "특정 사건(에피소드)"을 시뮬레이션하는 상위 능력. 기억은 그 특수 사례일 뿐.</li>
+        <li><strong>하나의 뿌리, 세 갈래(시간·양상에 따른 구분):</strong>
           <ul>
-            <li><em>Premise 1.</em> 만약 지각된 그럴듯함이 변수 X(예: 시뮬레이션 난이도/노력)에 의존한다면,
-              그럴듯함과 X는 단조적(monotonically)으로 함께 변해야 한다.</li>
-            <li><em>Premise 2.</em> 그런데 그럴듯함과 변수 X는 단조적으로 함께 변하지 <strong>않는다.</strong></li>
-            <li><em>Conclusion.</em> 따라서 그럴듯함은 변수 X(난이도/노력)에 의존하지 <strong>않는다.</strong></li>
+            <li><strong>일화적 기억</strong> — 과거의 <em>실제</em> 사건 ("무슨 일이 있었나")</li>
+            <li><strong>eFT (일화적 미래 사고)</strong> — <em>가능한 미래</em> ("무슨 일이 있을 수 있나")</li>
+            <li><strong>eCFT (일화적 반사실 사고)</strong> — <em>대안적 과거</em> ("어떻게 달라질 수 있었나")</li>
           </ul>
-        </li>
-        <li><strong>요지:</strong> 그럴듯함 효과는 단순히 "떠올리기 쉬웠다/어려웠다"(처리 유창성·노력)의 부산물이 아니다 —
-          그럴듯함은 독립적 차원임.</li>
+          셋은 같은 구성적 시스템을 공유 → 현상학도, (뇌영상에서) 뇌 네트워크도 겹친다.</li>
       </ul>
 
-      <h3>그럴듯함의 근원: 세 가지 후보 (three candidates)</h3>
+      <h3>계산 모델로: 예측하는 기억 (Predictive Memory)</h3>
       <ul>
-        <li>지각된 그럴듯함이 어디서 오는가에 대한 세 가지 설명:</li>
-        <li><strong>1) 난이도 관점(Difficulty view)</strong> — 떠올리기 어려울수록 덜 그럴듯하게 느낌.
-          <span class="cite">[Kahneman &amp; Tversky, 1982]</span></li>
-        <li><strong>2) 생생함 관점(Vividness view)</strong> — 표상이 생생할수록 더 그럴듯하게 느낌.
-          <span class="cite">[Bartlett &amp; Brannon, 2006]</span></li>
-        <li><strong>3) 표집 관점(Sampling view)</strong> — 가능한 대안들의 분포에서 얼마나 자주 표집되는지가 그럴듯함을 결정.
-          <span class="cite">[Phillips &amp; Cushman, 2017]</span></li>
-        <li>(앞의 <em>Cognition 2026</em> 결과는 난이도 관점을 약화시킴 → 표집 관점 쪽으로 무게가 실림.)</li>
+        <li><strong>De Brigard, F. (2012).</strong> "Predictive Memory and the Surprising Gap."
+          <em>Frontiers in Psychology</em> 3:420. <span class="cite">Andy Clark 예측처리 논문에 대한 코멘터리.</span></li>
+        <li>지각·행동의 <em>온라인</em> 예측처리(하향식 모델로 예측오차 최소화)를 <strong>오프라인 과정인
+          &lsquo;기억&rsquo;</strong>으로 확장. 인출은 단서·인출이력을 바탕으로 <em>가장 있을 법한</em> 기억을
+          계산하는 과정(예: Anderson의 ACT-R 합리적 분석). → "기억=재구성"을 베이지안/오차최소화 <em>메커니즘</em>으로 근거화.</li>
+        <li>남는 문제("surprising gap"): 통계적 놀라움(surprisal)과 <em>주관적으로 느끼는</em> 놀라움이
+          어긋날 수 있다 — 예측처리 이론의 미해결 과제로 지적.</li>
       </ul>
 
+      <h3>단행본: 「Memory and Remembering」 (Cambridge Elements, 2023)</h3>
+      <ul>
+        <li><strong>De Brigard, F. (2023).</strong> <em>Memory and Remembering.</em> Cambridge Elements in
+          Philosophy of Mind. CUP. <span class="cite">DOI 10.1017/9781108955447</span></li>
+        <li>세 가지 근본 질문을 종합: <strong>(1) 기억이란 무엇인가</strong>(다른 인지능력과의 구분·분류),
+          <strong>(2) 기억은 무슨 일을 하는가</strong>(기능이 정말 &lsquo;remembering&rsquo;인가 — 위 Synthese 논지의 확장),
+          <strong>(3) 우리는 무엇을 기억하는가</strong>(기억의 대상 vs 내용의 관계). 그의 이론적 입장의 결정판.</li>
+      </ul>
+
+      <hr>
+      <h2>② 행동 연구 — 그럴듯함(plausibility)은 어떻게 작동하나</h2>
+
+      <h3>반복 시뮬레이션의 역설 (Psychological Science, 2013)</h3>
+      <ul>
+        <li><strong>De Brigard, F., Szpunar, K. K., &amp; Schacter, D. L. (2013).</strong>
+          "Coming to Grips With the Past: Effect of Repeated Simulation on the Perceived Plausibility of
+          Episodic Counterfactual Thoughts." <em>Psychological Science</em> 24(7), 1329–1334.
+          <span class="cite">※ 3저자는 Schacter (Addis 아님).</span></li>
+        <li>디자인: 부정/긍정/중립 자전적 기억 → 일주일 뒤 상향/하향/중립 반사실 생성 →
+          다음 날 각 반사실을 <strong>1회 또는 4회</strong> 재시뮬레이션.</li>
+        <li><strong>반직관적 결과:</strong> 반복할수록 떠올리기가 더 <em>쉽고·생생하고·감정적</em>이 되지만,
+          <strong>지각된 그럴듯함은 오히려 낮아졌다.</strong> 즉 <em>유창함(ease)</em>과 <em>믿을 만함(plausibility)</em>은
+          갈라진다 — "쉽게 그려지면 그럴듯하다"는 직관이 깨짐. <span class="cite">(현장 슬라이드의 첫인상과 반대! 검증된 논문 결론을 따름.)</span></li>
+      </ul>
+
+      <h3>상향 vs 하향 반사실, 그리고 감정 조절</h3>
+      <ul>
+        <li><strong>상향(upward)</strong> = "~했더라면 더 좋았을 텐데"(후회 유발, 그러나 교훈적);
+          <strong>하향(downward)</strong> = "그래도 이만하길 다행"(위안).</li>
+        <li><strong>De Brigard, Hanna, St. Jacques &amp; Schacter (2019),</strong> <em>Cognition &amp; Emotion</em>
+          33(4), 646–659 — <strong>하향 반사실이 부정적 기억의 부정적 정서를 완화</strong>. 나쁜 일이 더 나빠질 수도
+          있었다고 상상하면 실제 일에 대해 기분이 나아짐. → 상향(반추)형 CFT가 불안·우울·PTSD와 얽히는 반면
+          하향형은 적응적일 수 있음.</li>
+        <li><strong>De Brigard &amp; Giovanello (2012),</strong> <em>Consciousness &amp; Cognition</em> —
+          반사실 사고는 실제 기억·미래사고보다 덜 생생하고 정서 강도도 약하게 <em>경험</em>됨.</li>
+        <li>임상 확장: <strong>Parikh, De Brigard &amp; LaBar (2022),</strong> <em>Frontiers in Psychology</em> —
+          불안 성향자에서 하향 반사실이 부정적 기억의 정서를 하향조절.</li>
+      </ul>
+
+      <h3>그럴듯한 시뮬레이션이 더 잘 기억된다 (PBR, 2025)</h3>
+      <ul>
+        <li><strong>Morales-Torres, R., Miceli, K., Huang, S., Szpunar, K. K., &amp; De Brigard, F. (2025).</strong>
+          "Episodic details are better remembered in plausible relative to implausible counterfactual simulations."
+          <em>Psychonomic Bulletin &amp; Review</em> 32(4), 1852–1859. <span class="cite">doi.org/10.3758/s13423-025-02670-0</span></li>
+        <li>자전적 기억을 떠올려 반사실을 만들고 거기에 <strong>새 사물을 끼워 넣은 뒤</strong> 다음 날 그 사물 기억을 검사.
+          <strong>더 그럴듯한 반사실에 들어간 사물이 더 잘 기억됨.</strong> → "기존 지식·스키마와 맞는 정보가 잘 남는다"는
+          기억 원리와 일치. 그럴듯함은 단지 주관적 느낌이 아니라 <em>실제로 무엇을 남길지</em>를 좌우.</li>
+      </ul>
+
+      <h3>그럴듯함은 "난이도" 때문이 아니다 (Cognition)</h3>
+      <ul>
+        <li><strong>Morales-Torres, R.*, Miceli, K.*, &amp; De Brigard, F.</strong> (*동등기여)
+          "Plausibility in episodic counterfactual thinking does not depend on the difficulty of the mental
+          simulation." <em>Cognition</em> 271:106424. <span class="cite">(2025 in press ~ 2026; 정확한 권/연도는 유동적.)</span></li>
+        <li>여러 실험(Exp2 N=468, Exp3 N=77): 사람들은 반사실을 연달아 만들 때 <strong>가장 그럴듯하고 생생한 것을 먼저</strong>
+          내놓지만, <em>난이도 느낌</em>에는 그에 상응하는 변화가 없음.</li>
+        <li><strong>논증(슬라이드의 삼단논법):</strong> 그럴듯함이 변수 X(난이도)에 의존한다면 둘이 단조적으로 함께 변해야 함
+          → 그런데 함께 변하지 않음 → 따라서 그럴듯함은 난이도에 의존하지 <strong>않음.</strong>
+          그럴듯함은 <em>생생함</em>과 <em>표집 순서</em>에 더 기댐 (아래 세 관점 참고).</li>
+      </ul>
+
+      <h3>그럴듯함은 어디서 오나? — 세 가지 관점</h3>
+      <ul>
+        <li><strong>① 난이도 관점(Difficulty)</strong> — 떠올리기 쉬울수록 그럴듯. <span class="cite">Kahneman &amp; Tversky, 1982 (simulation heuristic)</span>.
+          <em>De Brigard의 2013·Cognition 결과가 이 관점을 약화.</em></li>
+        <li><strong>② 생생함 관점(Vividness)</strong> — 이미지가 감각적으로 풍부할수록 그럴듯.
+          <span class="cite">Barlett &amp; Brannon, 2006 (※ Bartlett 아님)</span>. <em>부분적으로 지지됨.</em></li>
+        <li><strong>③ 표집 관점(Sampling)</strong> — 마음은 애초에 <em>확률 높은(가치 있는)</em> 대안을 먼저 표집.
+          그럴듯한 것이 그럴듯하게 느껴지는 건 그것이 <em>디폴트로 떠오르기</em> 때문.
+          <span class="cite">Phillips &amp; Cushman, 2017 (PNAS)</span>. <strong>← 최근 데이터가 지지하는 관점.</strong></li>
+      </ul>
+
+      <hr>
+      <h2>③ 뇌 연구 — 반사실 사고의 신경 기반</h2>
+
+      <h3>eCFT의 첫 뇌지도 (Neuropsychologia, 2013)</h3>
+      <ul>
+        <li><strong>De Brigard, Addis, Ford, Schacter &amp; Giovanello (2013).</strong>
+          "Remembering what could have happened: Neural correlates of episodic counterfactual thinking."
+          <em>Neuropsychologia</em> 51(12), 2401–2414.</li>
+        <li>"있을 수 있었던 일"을 상상하는 것은 실제 과거 회상·미래 상상과 <strong>같은 디폴트모드망(DMN)</strong>을 동원:
+          내측 측두엽(해마·해마방회), 후측 대상/후비장(retrosplenial), 설전부(precuneus), 하/외측 두정, 내측 전전두, 외측 측두.
+          우측 해마방회/해마는 장면 <em>구성</em> 초기에 관여(관계적 세부 묶기).</li>
+        <li>분석: 다변량 <strong>PLS</strong>(전뇌 활성 <em>패턴</em>=잠재변수 LV). 그럴듯한(likely) 반사실은 실제 회상에
+          더 가까운 패턴, 그럴듯하지 않은(unlikely) 것은 추가적 구성 부담 영역 동원.
+          주관적 가능성(likelihood)이 활성을 <em>파라메트릭</em>하게 조절.</li>
+        <li><strong>의의:</strong> 반사실 상상은 별도의 능력이 아니라 뇌의 일반 <em>구성적 시뮬레이션</em> 시스템의 일부임을 처음 실증.</li>
+      </ul>
+
+      <h3>누구의 대안인가 — self / other / object (NeuroImage, 2015)</h3>
+      <ul>
+        <li><strong>De Brigard, Spreng, Mitchell &amp; Schacter (2015),</strong> <em>NeuroImage</em> 109, 12–26.</li>
+        <li><strong>사람(자기·타인)</strong>에 대한 반사실이 <strong>사물</strong>에 대한 것보다 DMN을 더 동원.
+          낯선/다른 타인을 상상하면 배내측 전전두(dmPFC, 멘탈라이징)가, 친숙/유사한 타인은 자기 관련 영역이 관여.
+          우측 해마의 기능적 결합이 <em>누구를</em> 시뮬레이션하느냐에 따라 달라짐.</li>
+        <li>→ 반사실 네트워크가 <em>사회인지·자기투사</em>와 맞물려 유연하게 재구성됨.</li>
+      </ul>
+
+      <h3>의미적 vs 일화적 반사실 (NeuroImage, 2018)</h3>
+      <ul>
+        <li><strong>Parikh, Ruzic, Stewart, Spreng &amp; De Brigard (2018),</strong> <em>NeuroImage</em> 178, 332–345.</li>
+        <li><strong>일화적</strong>(특정 개인 사건 재상상)과 <strong>의미적</strong>(일반 세계지식 변경, 예: "차가 물로 달린다면")
+          반사실을 분리: 일화적이 DMN을 더, 의미적은 하측두·외측후두를 더 동원. 일화 반사실 안에서도
+          <em>자기중심적·더 그럴듯한</em> 것에 DMN이 더 반응.</li>
+        <li><strong>흥미로운 반전:</strong> 해마는 <em>그럴듯하지 않은(implausible)</em> 반사실에서 더 활성 —
+          덜 정합적인 정보를 억지로 더 많이 <em>묶어야</em> 하기 때문으로 해석.</li>
+      </ul>
+
+      <h3>★ 그럴듯함이 해마를 조절한다 (Hippocampus, 2024) — 세션의 핵심</h3>
+      <ul>
+        <li><strong>Miceli, Morales-Torres, Khoudary, Faul, Parikh &amp; De Brigard (2024),</strong>
+          "Perceived plausibility modulates hippocampal activity in episodic counterfactual thinking."
+          <em>Hippocampus</em> 34(1), 2–6. <span class="cite">정식 게재(단보). 앞 5인 동등기여.</span></li>
+        <li>두 fMRI 데이터셋을 합쳐 해마 하위영역을 검증: 그럴듯함이 활성을 파라메트릭하게 조절하며,
+          그 효과가 <strong>왼쪽 &amp; 전측(left anterior) 해마에 국한</strong> — 후측·우측 아님.
+          <strong>그럴듯함이 높을수록 좌전측 해마 활성 증가.</strong> (전측 해마 = 요지/거친 스키마 기반 장면 구성 → 그럴듯한=스키마 정합적 시뮬레이션과 부합.)</li>
+        <li>제목 "That couldn't have happened(그건 일어날 수 없었어)"의 실증적 뿌리 — 지각된 그럴듯함이 기억 재구성 회로에 직접 반영.</li>
+      </ul>
+
+      <div style="border-left:3px solid #c9a24a; padding-left:12px; margin:10px 0">
+        <strong>⚠️ 결정적 뉘앙스(모순 아님, 하위영역 문제):</strong>
+        2018 논문(그리고 아래 Weiler 2010)은 <em>덜</em> 그럴듯한 상상에서 해마가 <em>더</em> 활성(이질적 세부를 더 묶어야 하니까),
+        2024 논문은 <em>좌전측</em> 해마가 그럴듯함과 <em>함께</em> 증가. 방향이 반대로 보이지만,
+        <em>어느 하위영역·어느 대비</em>냐에 따라 갈리는 문제 — 그럴듯함↔해마 관계는 단순 단조가 아님. 발표에서 짚을 지점.
+      </div>
+
+      <h3>선행 근거: 확률이 해마를 조절 (Weiler et al., 2010)</h3>
+      <ul>
+        <li><strong>Weiler, Suchan &amp; Daum (2010),</strong> "Foreseeing the future: Occurrence probability of
+          imagined future events modulates hippocampal activation." <em>Hippocampus</em> 20(6), 685–690.</li>
+        <li>미래 사건을 상상할 때 <strong>확률이 낮을수록 우전측 해마가 더 활성</strong> — 있을 법하지 않은 일은
+          더 이질적인 세부를 재조합해야 하므로 묶기 부담↑. De Brigard가 "확률/그럴듯함이 해마에 반영된다"는 논리의 직접 선례로 인용.</li>
+      </ul>
+
+      <hr>
+      <h2>④ 그 밖의 연구 세계 (참고 — 폭을 보여주는 갈래들)</h2>
+      <ul>
+        <li><strong>거짓기억·기억왜곡:</strong> 위 Synthese 논지의 연장. 「&lsquo;Repressed memory&rsquo; makes no sense」
+          (<em>Topics in Cognitive Science</em>, 2024) — 억압된 기억 개념은 기억 재구성 방식과 양립 불가능하다는 개념적 비판.
+          범주학습으로 거짓재인의 기제(gist) 추적: De Brigard, Brady, Ruzic &amp; Schacter (2017), <em>Memory &amp; Cognition</em>.</li>
+        <li><strong>양상 인지·인과 판단(x-phi):</strong> 「Perceived similarity … affects counterfactual plausibility」
+          (<em>Cognition</em>, 2021) — 상상한 &lsquo;가능세계&rsquo;가 현실과 비슷할수록 더 그럴듯(Lewis 양상의미론의 실증판).
+          작위/부작위 인과의 반사실적 설명: Henne, Niemi, Pinillos, De Brigard &amp; Knobe (2019), <em>Cognition</em>.</li>
+        <li><strong>신경윤리·책임:</strong> 「Responsibility for forgetting」 (<em>Philosophical Studies</em>, 2019) — 태만한 망각의 책임.
+          「If you like it, does it matter if it's real?」 (<em>Philosophical Psychology</em>, 2010) — 노직의 경험기계에 대한
+          경험적 접근(현상유지 편향). <span class="cite">※ 프로프라놀롤/기억감쇠 단독 논문은 확인되지 않음 — 그의 신경윤리는 책임·망각·진정성 중심.</span></li>
+        <li><strong>신경과학의 철학:</strong> 「The nature of memory traces」 (<em>Philosophy Compass</em>, 2014),
+          「The explanatory indispensability of memory traces」(2020) — 기억 흔적(engram)의 불가결성 옹호(순수 시뮬레이션주의 완화).
+          「MVPA and the search for neural representations」(<em>Synthese</em>, 2021), 「The mirage of big-data phrenology」
+          (<em>BJPS</em>, in press) — 뇌영상 과잉해석 경계.</li>
+        <li><strong>마음 방황·주의·의식:</strong> 「Attention and consciousness」 (De Brigard &amp; Prinz, 2010, <em>WIREs Cog Sci</em>) —
+          주의와 의식은 분리 가능. 마음방황과 시선행동(Krasich et al., 2024, <em>Cognition</em>), 태만한 잘못과 비난(Murray et al., 2023, <em>JEP:General</em>).
+          <span class="cite">※ Christoff et al. 2016 NRN 논문은 그의 것 아님.</span></li>
+        <li><strong>향수(nostalgia):</strong> 「Nostalgia and Mental Simulation」(2018) — 향수는 정확한 자전적 회상이 아니라
+          <em>가능한 과거의 시뮬레이션</em>. 상상된 과거가 실제 과거만큼 잘 작동. (대중 에세이 "Nostalgia Reimagined", Aeon 2020.)
+          COVID-19 시기 향수의 기분·낙관 조절: Faul &amp; De Brigard (2022), <em>Memory</em>.</li>
+        <li><strong>기억 이분법 재고:</strong> 「Rethinking the distinction between episodic and semantic memory」
+          (De Brigard, Irish &amp; Umanath, 2022, <em>Memory &amp; Cognition</em>) — 일화/의미 기억은 연속체.
+          「Episodic memory without autonoetic consciousness」 (2024, <em>Phil. Trans. R. Soc. B</em>).</li>
+      </ul>
+
+    
     <!-- NOTES:mynotes:END -->
   </section>
   <section class="notes">
@@ -194,7 +257,33 @@
     <h2>🔖 팔로업</h2>
     <!-- NOTES:followups:START -->
     
-      <p class="empty">읽을 논문 · 연락할 사람 · 후속 아이디어.</p>
+
+      <h3>먼저 읽으면 좋은 순서</h3>
+      <ol>
+        <li><strong>De Brigard &amp; Parikh (2019),</strong> "Episodic Counterfactual Thinking,"
+          <em>Current Directions in Psychological Science</em> 28(1), 59–66. — <em>가장 쉬운 입문 리뷰.</em>
+          <span class="cite">people.duke.edu/~fd13 에 PDF</span></li>
+        <li><strong>De Brigard (2014),</strong> "Is memory for remembering?" <em>Synthese</em> 191(2), 155–185. — <em>이론적 핵심.</em></li>
+        <li><strong>De Brigard (2023),</strong> <em>Memory and Remembering</em> (Cambridge Elements). — <em>단행본 종합.</em></li>
+      </ol>
+
+      <h3>이 세션의 실증 축(그럴듯함×기억×뇌)</h3>
+      <ul>
+        <li>De Brigard, Szpunar &amp; Schacter (2013), <em>Psych Science</em> — 반복 시뮬레이션 → 그럴듯함 <em>하락</em>.</li>
+        <li>Morales-Torres, Miceli, Huang, Szpunar &amp; De Brigard (2025), <em>PBR</em> — 그럴듯한 것이 더 잘 기억됨.</li>
+        <li>Morales-Torres, Miceli &amp; De Brigard, <em>Cognition</em> 271:106424 — 그럴듯함 ≠ 난이도.</li>
+        <li>Miceli et al. (2024), <em>Hippocampus</em> 34(1) — 좌전측 해마가 그럴듯함과 함께 증가.</li>
+        <li>Parikh et al. (2018), <em>NeuroImage</em> 178 — 의미 vs 일화 반사실; 해마는 <em>덜</em> 그럴듯한 것에 더.</li>
+        <li>De Brigard et al. (2013), <em>Neuropsychologia</em> 51(12) — eCFT의 DMN 지도.</li>
+      </ul>
+
+      <h3>세션 중/후 확인하면 좋을 것</h3>
+      <ul>
+        <li>2018(해마↑ for implausible) vs 2024(좌전측 해마↑ for plausible)의 방향 차이를 발표에서 어떻게 정리하는지.</li>
+        <li>&lsquo;표집 관점&rsquo;이 맞다면 — 무엇이 &lsquo;디폴트로 표집되는&rsquo; 대안을 결정하나(규범·가치·확률)? Phillips &amp; Cushman (2017) 연결.</li>
+        <li>임상 함의: 하향 반사실의 정서조절이 불안/PTSD 개입으로 얼마나 확장 가능한지 (Parikh, De Brigard &amp; LaBar 2022).</li>
+      </ul>
+
     
     <!-- NOTES:followups:END -->
   </section>
