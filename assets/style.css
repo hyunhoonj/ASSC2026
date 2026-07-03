@@ -183,3 +183,6 @@ footer{margin-top:calc(var(--ma) + 1.5rem); padding-top:20px; border-top:1px sol
   transition:background .14s ease, transform .1s ease}
 .totop:hover{background:#25384a; color:#fff; text-decoration:none}
 .totop:active{transform:translateY(1px)}
+
+/* 인용/출처 표기 (메모 내 참고문헌) */
+.cite{color:#8a7a63; font-size:.82em; font-style:italic}
