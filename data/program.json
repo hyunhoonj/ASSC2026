@@ -1387,7 +1387,8 @@
       "end": "10:20",
       "speakers": [
         {
-          "name": "Christopher Timmermann"
+          "name": "Christopher Timmermann",
+          "affiliation": "Imperial College London / UCL"
         }
       ]
     },
@@ -1409,7 +1410,8 @@
           "affiliation": "University of Haifa"
         },
         {
-          "name": "Christopher Timmermann"
+          "name": "Christopher Timmermann",
+          "affiliation": "Imperial College London / UCL"
         }
       ]
     },
@@ -1495,7 +1497,8 @@
       "end": "16:50",
       "speakers": [
         {
-          "name": "Cristóbal Dañobeitia"
+          "name": "Cristóbal Dañobeitia",
+          "affiliation": "Fundación ECOH (Chile)"
         }
       ]
     },
@@ -1527,7 +1530,8 @@
       "end": "09:50",
       "speakers": [
         {
-          "name": "Antoine Lutz"
+          "name": "Antoine Lutz",
+          "affiliation": "Lyon Neuroscience Research Center (INSERM)"
         }
       ]
     },
@@ -1555,11 +1559,13 @@
       "start": "10:20",
       "end": "10:45",
       "chair": {
-        "name": "Adrian Palacios"
+        "name": "Adrian Palacios",
+        "affiliation": "Universidad de Valparaíso (CINV)"
       },
       "speakers": [
         {
-          "name": "Antoine Lutz"
+          "name": "Antoine Lutz",
+          "affiliation": "Lyon Neuroscience Research Center (INSERM)"
         },
         {
           "name": "David Martínez-Pernía",
@@ -1591,16 +1597,20 @@
       },
       "speakers": [
         {
-          "name": "Anaís Aluicio-González"
+          "name": "Anaís Aluicio-González",
+          "affiliation": "Universidad Adolfo Ibáñez (CSCN)"
         },
         {
-          "name": "Kevin Blanco Madariaga"
+          "name": "Kevin Blanco Madariaga",
+          "affiliation": "Universidad Adolfo Ibáñez"
         },
         {
-          "name": "María Tejada"
+          "name": "María Tejada",
+          "affiliation": "Universidad Adolfo Ibáñez (CSCN)"
         },
         {
-          "name": "Constanza Baquedano"
+          "name": "Constanza Baquedano",
+          "affiliation": "Universidad Adolfo Ibáñez"
         }
       ]
     },
@@ -1645,7 +1655,8 @@
       "end": "17:05",
       "speakers": [
         {
-          "name": "Alejandra Vásquez-Rosati"
+          "name": "Alejandra Vásquez-Rosati",
+          "affiliation": "Universidad Austral de Chile"
         }
       ]
     },
