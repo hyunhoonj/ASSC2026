@@ -36,9 +36,15 @@ ASSC 29 노트 컴패니언 — 녹음 전사 (OpenAI Speech-to-Text).
     python3 tools/transcribe.py recordings/sym2.m4a --session "day2 symposium 2"
     python3 tools/transcribe.py talk.m4a --session d3-ct-1 --note 2 --language en
 
-■ 큰 파일 (25MB 초과)
-  OpenAI 업로드 한도는 25MB. 초과 시 ffmpeg가 있으면 자동으로 압축·분할해
-  이어붙인다. ffmpeg가 없으면 안내만 하고 멈춘다.
+■ 긴 녹음 / 큰 파일 — 자동 처리
+  · gpt-4o-transcribe 계열은 1회 최대 약 23분(1400초). whisper-1은 길이 제한 없음.
+  · 업로드 한도는 공통 25MB.
+  모델·길이·용량에 따라 알아서 처리한다:
+    - ffmpeg 있음  → 조각(15분)으로 분할해 고른 모델 그대로 전사 후 이어붙임
+    - ffmpeg 없음  → 길이만 초과(25MB 이하)면 whisper-1로 자동 전환해 한 번에 전사
+                     용량이 25MB를 넘으면 압축 방법을 안내하고 멈춤
+  길이를 미리 못 재도(ffprobe 없음), gpt-4o가 길이 초과로 실패하면 그때 자동 폴백한다.
+  (ffmpeg가 있으면 ffprobe도 대개 함께 있어 미리 판단한다.)
 """
 import json, os, re, sys, html, subprocess, tempfile, shutil, uuid, mimetypes
 import urllib.request, urllib.error
@@ -51,8 +57,19 @@ import generate  # 세션 해석·페이지 생성 재사용
 API_URL = "https://api.openai.com/v1/audio/transcriptions"
 MODELS_URL = "https://api.openai.com/v1/models"
 SIZE_LIMIT = 24 * 1024 * 1024          # 24MB (한도 25MB보다 살짝 아래)
-CHUNK_SECONDS = 15 * 60                 # ffmpeg 분할 길이
+CHUNK_SECONDS = 15 * 60                 # ffmpeg 분할 길이 (900초 < gpt-4o 1400초 한도)
+GPT4O_MAX_SECONDS = 1400                # gpt-4o-transcribe 계열의 1회 최대 길이(약 23분)
 OK_EXT = {".flac",".m4a",".mp3",".mp4",".mpeg",".mpga",".oga",".ogg",".wav",".webm",".aac"}
+
+class ApiError(Exception):
+    def __init__(self, status, message):
+        self.status, self.message = status, message
+        super().__init__("HTTP %s: %s" % (status, message))
+
+def is_duration_error(e):
+    """gpt-4o 계열의 '길이 초과' 400 에러인지."""
+    return (isinstance(e, ApiError) and e.status == 400
+            and "longer than" in (e.message or "") and "second" in (e.message or "").lower())
 
 # ---------------- API 키 ----------------
 def find_key():
@@ -95,9 +112,9 @@ def _request(url, key, method="GET", data=None, ctype=None):
         detail = e.read().decode("utf-8", "replace")
         try: detail = json.loads(detail)["error"]["message"]
         except Exception: pass
-        sys.exit("✗ OpenAI API 오류 (HTTP %s): %s" % (e.code, detail))
+        raise ApiError(e.code, detail)
     except urllib.error.URLError as e:
-        sys.exit("✗ 네트워크 오류: %s" % e.reason)
+        raise ApiError(None, "네트워크 오류: %s" % e.reason)
 
 def check():
     key = find_key()
@@ -116,6 +133,21 @@ def transcribe_bytes(key, filename, data, model, language, prompt):
     if prompt:   fields["prompt"] = prompt
     ctype, body = _multipart(fields, filename, data)
     return _request(API_URL, key, "POST", body, ctype).strip()
+
+def have_ffmpeg(): return shutil.which("ffmpeg") is not None
+
+def ffprobe_duration(path):
+    """오디오 길이(초)를 ffprobe로 측정. ffprobe 없거나 실패 시 None."""
+    fp = shutil.which("ffprobe")
+    if not fp: return None
+    try:
+        out = subprocess.run(
+            [fp, "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=nokey=1:noprint_wrappers=1", path],
+            capture_output=True, text=True, timeout=60)
+        return float(out.stdout.strip())
+    except Exception:
+        return None
 
 def split_with_ffmpeg(path):
     """큰 파일을 32k mono mp3 조각으로 압축·분할. (파일경로 리스트, 임시디렉토리) 반환."""
@@ -138,22 +170,8 @@ def split_with_ffmpeg(path):
         sys.exit("✗ ffmpeg 분할 실패 (조각 없음).")
     return parts, tmp
 
-def transcribe_file(path, model, language, prompt):
-    if not os.path.exists(path):
-        sys.exit("✗ 오디오 파일 없음: %s" % path)
-    ext = os.path.splitext(path)[1].lower()
-    if ext not in OK_EXT:
-        print("⚠ 확장자 %s 는 검증되지 않았습니다. 지원: %s" % (ext, ", ".join(sorted(OK_EXT))))
-    key = find_key()
-    size = os.path.getsize(path)
-    print("· 파일: %s (%.1f MB), 모델: %s%s" %
-          (os.path.basename(path), size/1024/1024, model,
-           ", 언어=%s" % language if language else ""))
-
-    if size <= SIZE_LIMIT:
-        return transcribe_bytes(key, path, open(path, "rb").read(), model, language, prompt)
-
-    print("· 25MB 초과 → 분할 전사")
+def _transcribe_split(key, path, model, language, prompt):
+    """ffmpeg로 조각내어 조각마다 전사 후 이어붙인다 (모델 품질 유지)."""
     parts, tmp = split_with_ffmpeg(path)
     try:
         texts = []
@@ -166,6 +184,51 @@ def transcribe_file(path, model, language, prompt):
         return "\n\n".join(t for t in texts if t)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+
+def transcribe_file(path, model, language, prompt):
+    if not os.path.exists(path):
+        sys.exit("✗ 오디오 파일 없음: %s" % path)
+    ext = os.path.splitext(path)[1].lower()
+    if ext not in OK_EXT:
+        print("⚠ 확장자 %s 는 검증되지 않았습니다. 지원: %s" % (ext, ", ".join(sorted(OK_EXT))))
+    key = find_key()
+    size = os.path.getsize(path)
+    is_gpt4o = model.startswith("gpt-4o")
+    dur = ffprobe_duration(path)
+    print("· 파일: %s (%.1f MB%s), 모델: %s%s" %
+          (os.path.basename(path), size/1024/1024,
+           ", %.0f분" % (dur/60) if dur else "", model,
+           ", 언어=%s" % language if language else ""))
+
+    too_big  = size > SIZE_LIMIT
+    too_long = is_gpt4o and dur is not None and dur > GPT4O_MAX_SECONDS
+
+    # 1) 사전에 분할/전환이 필요한 경우 (용량 초과, 또는 gpt-4o 길이 초과가 미리 확인됨)
+    if too_big or too_long:
+        why = "25MB 초과" if too_big else "약 %.0f분 > gpt-4o 한도(약 23분)" % (dur/60)
+        if have_ffmpeg():
+            print("· %s → ffmpeg로 분할해 %s 로 전사" % (why, model))
+            return _transcribe_split(key, path, model, language, prompt)
+        if too_big:
+            split_with_ffmpeg(path)  # ffmpeg 없음 → 안내 출력 후 종료
+        # 길이만 초과(용량은 25MB 이하) & ffmpeg 없음 → whisper-1로 자동 전환
+        print("· %s, ffmpeg 없음 → 길이 제한이 없는 whisper-1로 자동 전환" % why)
+        return transcribe_bytes(key, path, open(path, "rb").read(),
+                                "whisper-1", language, prompt)
+
+    # 2) 단발 전사. gpt-4o인데 길이를 몰랐다가 길이 초과로 실패하면 여기서 폴백.
+    try:
+        return transcribe_bytes(key, path, open(path, "rb").read(),
+                                model, language, prompt)
+    except ApiError as e:
+        if not is_duration_error(e):
+            raise
+        if have_ffmpeg():
+            print("· 길이 초과 감지 → ffmpeg로 분할 후 %s 로 재전사" % model)
+            return _transcribe_split(key, path, model, language, prompt)
+        print("· 길이 초과 감지, ffmpeg 없음 → 길이 제한이 없는 whisper-1로 자동 전환")
+        return transcribe_bytes(key, path, open(path, "rb").read(),
+                                "whisper-1", language, prompt)
 
 # ---------------- 세션 페이지 삽입 ----------------
 def to_html(text, filename, note_n=None):
@@ -254,4 +317,7 @@ def main():
         print(text)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except ApiError as e:
+        sys.exit("✗ OpenAI API 오류 (%s)" % e)
