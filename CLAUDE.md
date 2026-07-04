@@ -36,6 +36,17 @@ python3 tools/generate.py all                    # 홈 + 모든 Day + 모든 세
    - 형식은 자유롭게 (`<ul><li>…</li></ul>`, `<p>…</p>`). 발표 요약은 `abstract`, 질문은 `questions`, 후속은 `followups` 블록으로.
 3. 저장 → 커밋 → push.
 
+## ⚓ 발표 목록 → 메모 앵커 이동 (매번 반드시!)
+`talks`가 있는 세션(Contributed Talks, Concurrent 등)은 상단 "발표 목록" 카드의 각 제목이
+`<a href="#note-N">`(N = 발표 순서, 1부터)로 링크된다. 따라서 발표별 요약을 `abstract` 블록에
+쓸 때는 **각 발표 소제목에 `id="note-N"`를 반드시 붙여야** 제목 클릭 시 해당 영역으로 이동한다.
+```html
+<h3 id="note-1">① 발표자 — 제목</h3> … <h3 id="note-2">② …</h3> …
+```
+- 규칙: 상단 카드의 `#note-N` 개수 = abstract의 `id="note-N"` 개수(발표 수와 일치). 하나라도 빠지면 그 제목은 클릭해도 안 넘어감.
+- 확인: `grep -oE 'href="#note-[0-9]+"' <page>` 와 `grep -oE 'id="note-[0-9]+"' <page>` 개수가 같아야 함.
+- (이 앵커는 abstract 블록 안에 있으므로 재생성해도 보존된다.)
+
 ## 포스터 개별 페이지가 필요하면
 `data/source/fullprogram.txt`의 `POSTER SESSION 1/2/3`에서 해당 포스터(예: P1-050)의 제목·발표자를 찾아 페이지/메모에 넣는다.
 
