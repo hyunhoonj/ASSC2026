@@ -21,6 +21,7 @@
   --indigo:#2f4a60;      /* 藍 — the calm accent */
   --vermilion:#b1402f;   /* 朱 — one warm spark */
   --tut:#5d55a0; --key:#a4482f; --sym:#2f6f9e; --con:#2e8467; --pos:#957020; --spc:#6a7079;
+  --ctb:#33628f; --exp:#b1402f;   /* satellite: contributed talks / experiential session */
   --serif:'Newsreader','Maru Buri','Georgia',serif;
   --sans:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Helvetica Neue','Segoe UI',Arial,sans-serif;
   --maxw:680px; --ma:2.4rem;
@@ -78,6 +79,7 @@ h4{font-weight:700; font-size:13px; letter-spacing:.02em; color:var(--indigo); m
 .pill.tutorial::before{background:var(--tut)} .pill.keynote::before{background:var(--key)}
 .pill.symposium::before{background:var(--sym)} .pill.concurrent::before{background:var(--con)}
 .pill.poster::before{background:var(--pos)} .pill.special::before{background:var(--spc)}
+.pill.contributed::before{background:var(--ctb)} .pill.experiential::before{background:var(--exp)}
 
 /* session speaker cards — soft paper boxes */
 .card{background:var(--card); border:1px solid var(--line2); border-radius:14px; padding:18px 22px;

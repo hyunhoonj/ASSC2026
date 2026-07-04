@@ -3,6 +3,10 @@
 이 저장소는 **ASSC 29 학회(산티아고, 2026-06-30 ~ 07-03) 세션 메모장**이다.
 목표: 참석한 세션마다 HTML 페이지를 만들고 거기에 메모를 쌓는다. 폰(claude.ai/code)과 PC 양쪽에서 편집하며 git으로 동기화한다.
 
+본 학회 직후 열리는 **부속(위성) 워크숍 — Neurophenomenology Satellite Meeting (7/4~5)** 도 같은 방식으로 포함되어 있다.
+`day: sat1`(토, 7/4) · `sat2`(일, 7/5), 세션 id는 `sat1-key-1`, `sat2-sym` 처럼 `sat` 접두. 홈 화면 아래쪽 "🛰 부속 워크숍" 카드로 연결된다.
+참조 예: `python3 tools/generate.py session "satellite keynote 3"` 또는 id `sat2-key-3`. 나머지(메모·재생성·보존)는 본 학회와 100% 동일.
+
 ## 데이터 원천 (신뢰의 근거)
 - **`data/program.json`** — 모든 세션의 제목·시간·룸·발표자·발표목록. **페이지 생성의 유일한 소스.**
 - **`data/source/fullprogram.txt`** — 공식 프로그램 PDF에서 뽑은 원문. 포스터 개별 목록(P1/P2/P3), 그리고 program.json에 없는 세부는 여기서 찾는다. (원본 PDF도 `data/source/`에 있음)

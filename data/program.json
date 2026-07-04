@@ -25,6 +25,13 @@
     "hashtag": "#ASSC29",
     "site": "https://theassc.org/assc-29/"
   },
+  "satellite": {
+    "name": "Neurophenomenology Satellite Meeting",
+    "subtitle": "Laying Down a Path While Walking: Thirty Years of Neurophenomenology",
+    "city": "Santiago, Chile",
+    "dates": "July 4–5, 2026",
+    "note": "ASSC 29 본 학회(6/30–7/3) 직후 열리는 위성 워크숍. 발표자 소속은 프로그램 포스터에 없어 비워 둠 — 현장/사용자 입력으로 채우세요."
+  },
   "days": [
     {
       "id": "day1",
@@ -53,6 +60,22 @@
       "date": "2026-07-03",
       "weekday": "Friday",
       "label": "Day 4 · Fri Jul 3"
+    },
+    {
+      "id": "sat1",
+      "folder": "Satellite_Jul4_Sat",
+      "date": "2026-07-04",
+      "weekday": "Saturday",
+      "label": "Satellite · Sat Jul 4",
+      "track": "satellite"
+    },
+    {
+      "id": "sat2",
+      "folder": "Satellite_Jul5_Sun",
+      "date": "2026-07-05",
+      "weekday": "Sunday",
+      "label": "Satellite · Sun Jul 5",
+      "track": "satellite"
     }
   ],
   "sessions": [
@@ -1329,6 +1352,311 @@
       "end": "00:00",
       "room": "Bar Liguria, Merced 298",
       "note": "Optional. Light snacks and a beverage provided."
+    },
+    {
+      "id": "sat1-welcome",
+      "slug": "welcome-opening-remarks",
+      "type": "special",
+      "day": "sat1",
+      "title": "Welcome & Opening Remarks",
+      "start": "09:00",
+      "end": "09:20"
+    },
+    {
+      "id": "sat1-key-1",
+      "slug": "keynote-1-berkovich-ohana",
+      "type": "keynote",
+      "day": "sat1",
+      "title": "Keynote 1 — Aviva Berkovich-Ohana",
+      "start": "09:20",
+      "end": "09:50",
+      "speakers": [
+        {
+          "name": "Aviva Berkovich-Ohana",
+          "affiliation": "University of Haifa"
+        }
+      ]
+    },
+    {
+      "id": "sat1-key-2",
+      "slug": "keynote-2-timmermann",
+      "type": "keynote",
+      "day": "sat1",
+      "title": "Keynote 2 — Christopher Timmermann",
+      "start": "09:50",
+      "end": "10:20",
+      "speakers": [
+        {
+          "name": "Christopher Timmermann"
+        }
+      ]
+    },
+    {
+      "id": "sat1-panel",
+      "slug": "panel-discussion-1",
+      "type": "special",
+      "day": "sat1",
+      "title": "Panel Discussion",
+      "start": "10:20",
+      "end": "10:45",
+      "chair": {
+        "name": "Yair Dor-Ziderman",
+        "affiliation": "University of Haifa"
+      },
+      "speakers": [
+        {
+          "name": "Aviva Berkovich-Ohana",
+          "affiliation": "University of Haifa"
+        },
+        {
+          "name": "Christopher Timmermann"
+        }
+      ]
+    },
+    {
+      "id": "sat1-poster",
+      "slug": "poster-session-coffee",
+      "type": "poster",
+      "day": "sat1",
+      "title": "Poster Session & Coffee Break",
+      "start": "10:50",
+      "end": "11:50",
+      "note": "포스터 개별 목록은 프로그램 포스터에 없습니다 — 현장 목록/사용자 입력으로 채우세요."
+    },
+    {
+      "id": "sat1-ct-1",
+      "slug": "contributed-talks-1",
+      "type": "contributed",
+      "day": "sat1",
+      "title": "Contributed Talks I",
+      "start": "12:00",
+      "end": "13:20",
+      "talks": [
+        {
+          "time": "12:00–12:20",
+          "title": "From the Hard Problem to the Body–Body Problem: Neurophenomenology, Enactivism, and the Limits of Dissolution",
+          "presenter": "Ignacio Cea"
+        },
+        {
+          "time": "12:20–12:40",
+          "title": "Beyond On- and Off-Task in Mind-Wandering Research: Using Phenomenology to Enrich Our Understanding of Mind-Wandering",
+          "presenter": "Marieke K. van Vugt"
+        },
+        {
+          "time": "12:40–13:00",
+          "title": "Empathy for Pain in Cervical Spinal Cord Injury: A Neurophenomenological Study on the Role of the Body",
+          "presenter": "Antonia Zepeda-Vergara"
+        },
+        {
+          "time": "13:00–13:20",
+          "title": "A Hands-On Tutorial for Computational Identification of Experiential Themes from Phenomenological Reports",
+          "presenter": "Romy Beauté"
+        }
+      ]
+    },
+    {
+      "id": "sat1-ct-2",
+      "slug": "contributed-talks-2",
+      "type": "contributed",
+      "day": "sat1",
+      "title": "Contributed Talks II",
+      "start": "14:35",
+      "end": "15:55",
+      "talks": [
+        {
+          "time": "14:35–14:55",
+          "title": "What Could Count as a “First-Person” Perspective in a Machine Model of Consciousness?",
+          "presenter": "Lenore Blum"
+        },
+        {
+          "time": "14:55–15:15",
+          "title": "An Ethnographic Neurophenomenology of surrender: the case of speaking in Tongues",
+          "presenter": "Joshua Brahinsky"
+        },
+        {
+          "time": "15:15–15:35",
+          "title": "Dissociating Phenomenological Structure from Behavioral and Neural Performance: A Neurophenomenological Study of Cardiac Interoception",
+          "presenter": "Mayte Vergara-Manríquez"
+        },
+        {
+          "time": "15:35–15:55",
+          "title": "The Nested States Model: An empirical framework for integrating brain and mind",
+          "presenter": "George H. Denfield"
+        }
+      ]
+    },
+    {
+      "id": "sat1-exp",
+      "slug": "experiential-session-1",
+      "type": "experiential",
+      "day": "sat1",
+      "title": "Experiential Session — Contemplative Listening in an Immersive Ecological Soundscape: A Neurophenomenological Experiential Protocol",
+      "start": "16:00",
+      "end": "16:50",
+      "speakers": [
+        {
+          "name": "Cristóbal Dañobeitia"
+        }
+      ]
+    },
+    {
+      "id": "sat1-closing",
+      "slug": "collective-closing-discussion",
+      "type": "special",
+      "day": "sat1",
+      "title": "Collective Closing Discussion",
+      "start": "17:30",
+      "end": "18:30"
+    },
+    {
+      "id": "sat2-welcome",
+      "slug": "welcome-gathering-meditation",
+      "type": "special",
+      "day": "sat2",
+      "title": "Welcome Gathering & Meditation",
+      "start": "09:00",
+      "end": "09:20"
+    },
+    {
+      "id": "sat2-key-3",
+      "slug": "keynote-3-lutz",
+      "type": "keynote",
+      "day": "sat2",
+      "title": "Keynote 3 — Antoine Lutz",
+      "start": "09:20",
+      "end": "09:50",
+      "speakers": [
+        {
+          "name": "Antoine Lutz"
+        }
+      ]
+    },
+    {
+      "id": "sat2-key-4",
+      "slug": "keynote-4-martinez-pernia",
+      "type": "keynote",
+      "day": "sat2",
+      "title": "Keynote 4 — David Martínez-Pernía",
+      "start": "09:50",
+      "end": "10:20",
+      "speakers": [
+        {
+          "name": "David Martínez-Pernía",
+          "affiliation": "Universidad Adolfo Ibañez"
+        }
+      ]
+    },
+    {
+      "id": "sat2-panel",
+      "slug": "panel-discussion-2",
+      "type": "special",
+      "day": "sat2",
+      "title": "Panel Discussion",
+      "start": "10:20",
+      "end": "10:45",
+      "chair": {
+        "name": "Adrian Palacios"
+      },
+      "speakers": [
+        {
+          "name": "Antoine Lutz"
+        },
+        {
+          "name": "David Martínez-Pernía",
+          "affiliation": "Universidad Adolfo Ibañez"
+        }
+      ]
+    },
+    {
+      "id": "sat2-poster",
+      "slug": "poster-session-coffee",
+      "type": "poster",
+      "day": "sat2",
+      "title": "Poster Session & Coffee Break",
+      "start": "10:50",
+      "end": "11:50",
+      "note": "포스터 개별 목록은 프로그램 포스터에 없습니다 — 현장 목록/사용자 입력으로 채우세요."
+    },
+    {
+      "id": "sat2-sym",
+      "slug": "thematic-symposium",
+      "type": "symposium",
+      "day": "sat2",
+      "title": "Thematic Symposium — Advances and Challenges in Neurophenomenology: Toward Methodological Consolidation",
+      "start": "12:00",
+      "end": "13:30",
+      "chair": {
+        "name": "David Martínez-Pernía",
+        "affiliation": "Universidad Adolfo Ibañez"
+      },
+      "speakers": [
+        {
+          "name": "Anaís Aluicio-González"
+        },
+        {
+          "name": "Kevin Blanco Madariaga"
+        },
+        {
+          "name": "María Tejada"
+        },
+        {
+          "name": "Constanza Baquedano"
+        }
+      ]
+    },
+    {
+      "id": "sat2-ct-3",
+      "slug": "contributed-talks-3",
+      "type": "contributed",
+      "day": "sat2",
+      "title": "Contributed Talks III",
+      "start": "14:45",
+      "end": "16:05",
+      "talks": [
+        {
+          "time": "14:45–15:05",
+          "title": "Intersubjectivity: Empirical Approaches to Exploring Experiences of Minimally Communicative Persons from a Second-Person Perspective",
+          "presenter": "Stefanie Blain-Moraes"
+        },
+        {
+          "time": "15:05–15:25",
+          "title": "The Objective Dimension of Aesthetic Experience: Artwork and Qualia in a Neurophenomenological Account of Being Moved by Art",
+          "presenter": "Deysha Poyser"
+        },
+        {
+          "time": "15:25–15:45",
+          "title": "A Computational Phenomenology Approach to Modelling Meditative Deconstruction with Active Inference",
+          "presenter": "Shawn Prest"
+        },
+        {
+          "time": "15:45–16:05",
+          "title": "Liminal Neurophenomenology: A Front-Loaded Generalization of the Study of Agency",
+          "presenter": "Alessandro Solfo"
+        }
+      ]
+    },
+    {
+      "id": "sat2-exp",
+      "slug": "experiential-session-2",
+      "type": "experiential",
+      "day": "sat2",
+      "title": "Experiential Session — Exploring Basic Emotions: Embodied Practice and Micro-Phenomenology",
+      "start": "16:15",
+      "end": "17:05",
+      "speakers": [
+        {
+          "name": "Alejandra Vásquez-Rosati"
+        }
+      ]
+    },
+    {
+      "id": "sat2-closing",
+      "slug": "collective-closing-discussion",
+      "type": "special",
+      "day": "sat2",
+      "title": "Collective Closing Discussion",
+      "start": "17:45",
+      "end": "18:30"
     }
   ]
 }
