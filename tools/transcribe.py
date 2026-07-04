@@ -23,7 +23,8 @@ ASSC 29 노트 컴패니언 — 녹음 전사 (OpenAI Speech-to-Text).
     --session <참조>   전사 결과를 해당 세션 페이지 메모에 삽입
                        (참조 = generate.py와 동일: "day2 symposium 2", "d2-sym-2" 등)
     --block <키>       삽입할 메모 블록 (abstract|mynotes|questions|followups, 기본 abstract)
-    --note <N>         발표 목록이 있는 세션에서 N번째 발표 아래에 앵커(id="note-N")로 삽입
+    --note <N>         N번째 발표 아래에 삽입. id="note-N" 앵커가 이미 있으면(사전조사 메모 등)
+                       중복 없이 그 발표 섹션 바로 아래에, 없으면 새로 앵커를 붙여 넣는다.
     --model <이름>     기본 gpt-4o-transcribe (대안: gpt-4o-mini-transcribe, whisper-1)
     --language <코드>  예: en, ko (생략 시 자동 감지)
     --prompt <텍스트>  전문 용어/이름 힌트 (예: "ASSC, IIT, GNWT, phenomenology")
@@ -231,13 +232,13 @@ def transcribe_file(path, model, language, prompt):
                                 "whisper-1", language, prompt)
 
 # ---------------- 세션 페이지 삽입 ----------------
-def to_html(text, filename, note_n=None):
+def to_html(text, filename, note_n=None, emit_id=True):
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
     if not paras: paras = [text.strip()]
     body = "\n      ".join("<p>%s</p>" % html.escape(" ".join(p.split()), quote=True)
                            for p in paras)
-    hid = ' id="note-%d"' % note_n if note_n else ""
+    hid = ' id="note-%d"' % note_n if (note_n and emit_id) else ""
     label = ("🎙 전사 — %s" % html.escape(filename, quote=True)) if not note_n else \
             ("🎙 전사 %d — %s" % (note_n, html.escape(filename, quote=True)))
     return ('\n      <div class="transcript">\n'
@@ -245,7 +246,7 @@ def to_html(text, filename, note_n=None):
             '      %s\n'
             '      </div>\n    ' % (hid, label, stamp, body))
 
-def insert_into_session(prog, ref, block_key, snippet):
+def insert_into_session(prog, ref, block_key, text, filename, note_n=None):
     s = generate.resolve(prog, ref)
     if not s:
         sys.exit("✗ 세션을 못 찾음: '%s'  (python3 tools/generate.py list 로 확인)" % ref)
@@ -259,12 +260,25 @@ def insert_into_session(prog, ref, block_key, snippet):
     if not m:
         sys.exit("✗ '%s' 블록을 찾을 수 없습니다 (키: abstract|mynotes|questions|followups)." % block_key)
     inner = m.group(1)
-    # 빈 자리표시자(<p class="empty">…</p>)만 있으면 그것을 치우고 넣는다.
-    if re.search(r'<p class="empty">.*?</p>', inner, re.S) and not re.sub(
+
+    # 이미 이 발표의 앵커(id="note-N")가 페이지에 있으면(사전조사 메모 등),
+    # 중복 id를 만들지 않고 그 발표 섹션 바로 아래(= 다음 발표 앵커 앞)에 넣는다.
+    has_anchor = bool(note_n and re.search(r'id="note-%d"' % note_n, inner))
+    snippet = to_html(text, filename, note_n, emit_id=not has_anchor)
+
+    if has_anchor:
+        nxt = re.search(r'\n\s*<h[1-6][^>]*id="note-%d"' % (note_n + 1), inner)
+        if nxt:
+            new_inner = inner[:nxt.start()] + "\n    " + snippet + inner[nxt.start():]
+        else:  # 마지막 발표 → 블록 끝에 추가
+            new_inner = inner.rstrip() + "\n    " + snippet
+    elif re.search(r'<p class="empty">.*?</p>', inner, re.S) and not re.sub(
             r'<p class="empty">.*?</p>', "", inner, flags=re.S).strip():
+        # 빈 자리표시자만 있으면 치우고 넣는다.
         new_inner = "\n    " + snippet
     else:
-        new_inner = inner.rstrip() + "\n" + snippet
+        new_inner = inner.rstrip() + "\n    " + snippet
+
     new_block = start + new_inner + end
     txt = txt[:m.start()] + new_block + txt[m.end():]
     open(path, "w", encoding="utf-8").write(txt)
@@ -306,8 +320,8 @@ def main():
 
     if opts["session"]:
         prog = generate.load()
-        snippet = to_html(text, os.path.basename(audio), opts["note"])
-        rel, s = insert_into_session(prog, opts["session"], opts["block"], snippet)
+        rel, s = insert_into_session(prog, opts["session"], opts["block"],
+                                     text, os.path.basename(audio), opts["note"])
         # 링크 상태 갱신
         generate.build_day(prog, generate.day_of(prog, s["day"]))
         print("· 세션 페이지에 삽입:", rel, "(블록: %s%s)" %
