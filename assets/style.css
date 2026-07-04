@@ -112,6 +112,10 @@ h4{font-weight:700; font-size:13px; letter-spacing:.02em; color:var(--indigo); m
 .notes h3{color:var(--sumi-dk); margin-top:16px}
 .notes h4{margin-top:20px}
 .notes p{margin:12px 0; line-height:1.95}
+/* 🎙 녹음 전사 블록 (tools/transcribe.py 가 넣는 자동 전사) */
+.transcript{border-left:3px solid var(--line2); padding:2px 0 2px 16px; margin:14px 0}
+.transcript h3{color:var(--indigo); font-size:15px; margin:4px 0 8px}
+.transcript p{color:var(--sumi); margin:8px 0}
 .notes ul{margin:12px 0; padding-left:22px}
 .notes li{margin:9px 0; line-height:1.9; padding-left:4px}
 .notes li::marker{color:var(--faint)}

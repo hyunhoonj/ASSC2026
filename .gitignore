@@ -5,3 +5,22 @@
 .vscode/
 __pycache__/
 *.pyc
+
+# 비밀키 — 절대 커밋 금지 (OpenAI API 키 등)
+.secrets/
+*.key
+openai_api_key
+
+# 녹음 원본 (용량 큼 — 전사 텍스트만 커밋, 오디오는 로컬 보관)
+recordings/
+*.mp3
+*.m4a
+*.wav
+*.aac
+*.flac
+*.ogg
+*.oga
+*.webm
+*.mp4
+*.mpga
+*.mpeg

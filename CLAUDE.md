@@ -47,6 +47,26 @@ python3 tools/generate.py all                    # 홈 + 모든 Day + 모든 세
 - 확인: `grep -oE 'href="#note-[0-9]+"' <page>` 와 `grep -oE 'id="note-[0-9]+"' <page>` 개수가 같아야 함.
 - (이 앵커는 abstract 블록 안에 있으므로 재생성해도 보존된다.)
 
+## 🎙 녹음 전사 (OpenAI 음성 인식)
+세션 녹음을 텍스트로 옮길 때 `tools/transcribe.py`를 쓴다 (OpenAI `gpt-4o-transcribe`). 표준 라이브러리만 사용 — 추가 설치 불필요.
+
+**API 키** (아래 순서로 찾음, git에는 절대 안 올라감):
+1. 환경변수 `OPENAI_API_KEY` ← **권장.** 폰(claude.ai/code)은 환경(Environment) 설정에 시크릿으로, PC는 셸 프로필에 `export OPENAI_API_KEY=sk-...`
+2. 파일 `.secrets/openai_api_key` (`.gitignore`에 포함됨 — 이 저장소 로컬 전용, 기기마다 따로 둬야 함)
+
+```bash
+python3 tools/transcribe.py --check                              # 키·연결 점검
+python3 tools/transcribe.py rec.m4a                              # 전사만 (화면 출력)
+python3 tools/transcribe.py rec.m4a -o rec.txt                   # .txt 로 저장
+python3 tools/transcribe.py rec.m4a --session "day2 symposium 2" # 세션 페이지 abstract에 삽입
+python3 tools/transcribe.py talk.m4a --session d3-ct-1 --note 2  # N번째 발표 아래 앵커(id="note-N")로 삽입
+```
+- 주요 옵션: `--block abstract|mynotes|questions|followups`(기본 abstract), `--language en|ko`, `--prompt "ASSC, IIT, GNWT"`(용어 힌트), `--model gpt-4o-transcribe|gpt-4o-mini-transcribe|whisper-1`.
+- **삽입은 항상 "추가"만** 한다 — 기존 메모 보존 규칙 그대로. 빈 블록이면 자리표시자만 치우고 넣는다.
+- `--note N`을 쓰면 발표 앵커 규칙(위 ⚓ 섹션)에 맞춰 `id="note-N"`을 붙여 준다.
+- **녹음 원본(mp3/m4a/wav…)은 커밋하지 않는다** (`.gitignore` 처리됨). 전사 텍스트만 페이지에 남긴다.
+- 25MB 초과 파일은 `ffmpeg`가 있으면 자동 압축·분할해 이어붙인다. 없으면 안내대로 직접 압축(`ffmpeg -i in.m4a -ac 1 -b:a 32k out.mp3`).
+
 ## 포스터 개별 페이지가 필요하면
 `data/source/fullprogram.txt`의 `POSTER SESSION 1/2/3`에서 해당 포스터(예: P1-050)의 제목·발표자를 찾아 페이지/메모에 넣는다.
 
