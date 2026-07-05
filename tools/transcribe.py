@@ -135,6 +135,50 @@ def transcribe_bytes(key, filename, data, model, language, prompt):
     ctype, body = _multipart(fields, filename, data)
     return _request(API_URL, key, "POST", body, ctype).strip()
 
+def looks_looped(text):
+    """도입부 정적 등에서 whisper가 같은 어구를 연달아 반복하는 환각을 감지.
+    2~6단어 창이 4번 이상 '연속' 반복되면 True (정상 발화에선 거의 없음)."""
+    w = text.split()
+    if len(w) < 12: return False
+    for k in range(2, 7):
+        best = run = 1
+        i = 0
+        while i + 2 * k <= len(w):
+            if w[i:i+k] == w[i+k:i+2*k]:
+                run += 1; i += k
+            else:
+                if run > best: best = run
+                run = 1; i += 1
+        if max(best, run) >= 4:
+            return True
+    return False
+
+def _norm_words(s):
+    return [w for w in (re.sub(r"[^\w-]", "", x.lower()) for x in s.split()) if w]
+
+def prompt_echo(text, prompt, head_words=60, k=4):
+    """도입부(앞부분)에 프롬프트의 여러 단어 어구가 그대로 튀어나오면 환각으로 본다.
+    자연 발화가 프롬프트 문장을 4단어 연속 그대로 말할 일은 거의 없다."""
+    if not prompt: return False
+    pw, hw = _norm_words(prompt), _norm_words(text)[:head_words]
+    if len(pw) < k or len(hw) < k: return False
+    pgrams = {tuple(pw[i:i+k]) for i in range(len(pw)-k+1)}
+    return any(tuple(hw[i:i+k]) in pgrams for i in range(len(hw)-k+1))
+
+def is_hallucinated(text, prompt):
+    return looks_looped(text) or prompt_echo(text, prompt)
+
+def transcribe_clean(key, filename, data, model, language, prompt):
+    """전사 후 반복/프롬프트-되뇌기 환각이 보이면 프롬프트 없이 한 번 재시도한다."""
+    text = transcribe_bytes(key, filename, data, model, language, prompt)
+    if prompt and is_hallucinated(text, prompt):
+        print("   ⚠ 도입부 환각(반복/프롬프트 되뇌기) 감지 → 프롬프트 없이 재시도")
+        retry = transcribe_bytes(key, filename, data, model, language, None)
+        if not is_hallucinated(retry, None):
+            return retry
+        return retry if len(retry) >= len(text) else text  # 둘 다 이상하면 더 긴 쪽
+    return text
+
 def have_ffmpeg(): return shutil.which("ffmpeg") is not None
 
 def ffprobe_duration(path):
@@ -180,7 +224,7 @@ def _transcribe_split(key, path, model, language, prompt):
             print("   조각 %d/%d 전사 중…" % (i, len(parts)))
             # 이전 조각 끝부분을 다음 prompt로 이어 문맥 유지
             carry = (texts[-1][-400:] if texts else "") or prompt
-            texts.append(transcribe_bytes(key, p, open(p, "rb").read(),
+            texts.append(transcribe_clean(key, p, open(p, "rb").read(),
                                           model, language, carry or None))
         return "\n\n".join(t for t in texts if t)
     finally:
@@ -214,12 +258,12 @@ def transcribe_file(path, model, language, prompt):
             split_with_ffmpeg(path)  # ffmpeg 없음 → 안내 출력 후 종료
         # 길이만 초과(용량은 25MB 이하) & ffmpeg 없음 → whisper-1로 자동 전환
         print("· %s, ffmpeg 없음 → 길이 제한이 없는 whisper-1로 자동 전환" % why)
-        return transcribe_bytes(key, path, open(path, "rb").read(),
+        return transcribe_clean(key, path, open(path, "rb").read(),
                                 "whisper-1", language, prompt)
 
     # 2) 단발 전사. gpt-4o인데 길이를 몰랐다가 길이 초과로 실패하면 여기서 폴백.
     try:
-        return transcribe_bytes(key, path, open(path, "rb").read(),
+        return transcribe_clean(key, path, open(path, "rb").read(),
                                 model, language, prompt)
     except ApiError as e:
         if not is_duration_error(e):
@@ -228,7 +272,7 @@ def transcribe_file(path, model, language, prompt):
             print("· 길이 초과 감지 → ffmpeg로 분할 후 %s 로 재전사" % model)
             return _transcribe_split(key, path, model, language, prompt)
         print("· 길이 초과 감지, ffmpeg 없음 → 길이 제한이 없는 whisper-1로 자동 전환")
-        return transcribe_bytes(key, path, open(path, "rb").read(),
+        return transcribe_clean(key, path, open(path, "rb").read(),
                                 "whisper-1", language, prompt)
 
 # ---------------- 세션 페이지 삽입 ----------------

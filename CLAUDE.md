@@ -62,6 +62,7 @@ python3 tools/transcribe.py rec.m4a --session "day2 symposium 2" # 세션 페이
 python3 tools/transcribe.py talk.m4a --session d3-ct-1 --note 2  # N번째 발표 아래 앵커(id="note-N")로 삽입
 ```
 - 주요 옵션: `--block abstract|mynotes|questions|followups`(기본 abstract), `--language en|ko`, `--prompt "ASSC, IIT, GNWT"`(용어 힌트), `--model gpt-4o-transcribe|gpt-4o-mini-transcribe|whisper-1`.
+- `--prompt`는 **문장("keynote by 홍길동")보다 용어 나열**("neurophenomenology, embodiment, affect …")이 안전하다. 문장을 넣으면 도입부 정적에서 whisper가 그 문구를 되뇌는 환각이 날 수 있는데, 이 경우 도구가 **자동 감지해 프롬프트 없이 한 번 재전사**한다.
 - **삽입은 항상 "추가"만** 한다 — 기존 메모 보존 규칙 그대로. 빈 블록이면 자리표시자만 치우고 넣는다.
 - `--note N`을 쓰면 발표 앵커 규칙(위 ⚓ 섹션)에 맞춰 처리한다: `id="note-N"`이 **이미 있으면**(사전조사 메모 등) 중복 id 없이 그 발표 섹션 **바로 아래**에, 없으면 새 `id="note-N"`을 붙여 넣는다.
 - **녹음 원본(mp3/m4a/wav…)은 커밋하지 않는다** (`.gitignore` 처리됨). 전사 텍스트만 페이지에 남긴다.
