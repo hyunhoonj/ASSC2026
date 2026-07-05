@@ -22,6 +22,7 @@
     
     
     
+    
       <p class="hint">아래는 <b>사전 조사</b> 메모입니다 — 공개 자료(논문·연구실 페이지 등)를 바탕으로 정리했고, 공식 초록이 아닙니다. <b>“(추정)”</b> 표시는 발표 제목·연구 맥락에서 추론한 내용이라 현장 발표와 대조가 필요합니다.</p>
       <h3 id="note-1">① Ignacio Cea — From the Hard Problem to the Body–Body Problem</h3>
 
@@ -86,10 +87,26 @@
 <h4>발표자 연구 방향 · 관련 논문</h4><p>Zepeda-Vergara는 Martínez-Pernía·Cea 등이 이끄는 UAI 신경현상학 그룹 계열로, 공감의 체화·상호주관성을 1인칭 미시현상학 면담과 생리·운동 지표를 결합해 연구한다.</p><ul><li>Zepeda 외, "From Disconnection to Compassion: A Phenomenological Exploration of Embodied Empathy in a Face-to-Face Interaction" · <em>Frontiers in Psychology</em> · 2025</li><li>Zepeda 외(공동저자), "When the Body Resonates with the Pain of the Other: Empathy Bodyssence in Parkinson's Disease" · <em>Neuroscience of Consciousness</em> · 2026</li></ul><p>척수손상 특정 논문은 공개 확인이 어려움 — 본 발표가 첫 발표 성과일 가능성(추정).</p>
 <h4>예상 논지 (추정)</h4><p>제임스-랑게식/내수용감각 관점에서, 몸에서 올라오는 신호가 차단·변형된 척수손상 환자는 타인의 통증 공감 경험도 질적으로 달라진다는 것이 핵심 가설로 보인다. 즉 공감은 순수 인지가 아니라 몸을 매개로 작동한다는 주장을, 손상이라는 "자연 실험"으로 뒷받침하려는 발표로 추정된다.</p>
       <h3 id="note-4">④ Romy Beauté — Computational Identification of Experiential Themes</h3>
+
+            <p class="hint">🎙 <b>실제 발표 정리</b> (현장 녹음 기반) — 핵심 위주로 쉽게 풀어 씀.</p>
+<p><b>한 줄 요약</b> — 1인칭 체험 보고(phenomenological reports) 뭉치를 미리 정한 틀에 가두지 않고 <b>데이터가 스스로 구조를 드러내게</b> 하는 <b>MOSAIC</b> 파이프라인(임베딩 → 군집화 → LLM 라벨링)의 실습형 시연으로, 코딩 없이 쓸 수 있는 웹 인터페이스까지 보여줌.</p>
+<ul>
+  <li><b>"와이드 앵글(wide-angle)" 접근</b> — 측정 방식이 곧 과학이 볼 수 있는 것을 결정한다며 <b>가로등(lamppost) 비유</b>를 듦(불빛 아래에서만 열쇠를 찾듯, 이론·설문지·평정척도가 현상을 미리 좁혀 본다). 구조가 데이터를 규정하는 대신 <b>데이터가 구조를 규정</b>하게 하는, 기존 설문지를 보완하는 방법.</li>
+  <li><b>MOSAIC 파이프라인</b> — 대량의 자유서술형 체험 보고를 받아 → 일관된 <b>체험 군집(experiential clusters)</b>으로 묶고 → LLM으로 각 군집에 해석 가능한 라벨을 붙임. 방법론은 발표자 그룹이 최근 낸 논문에 상세히 정리(구체 제목은 발표 중 언급 안 됨).</li>
+  <li><b>설문지 비교·확장, 포용성(inclusivity)</b> — 데이터에서 나온 구조가 기존 설문지에 얼마나 담기고 무엇이 빠지는지 대조해, 놓친 범주로 설문을 <b>확장</b>할 수 있음. 여러 집단의 방대한 보고를 한꺼번에 다루므로 연구자 개인 관점의 편향을 줄이는 포용적 접근이라고 강조.</li>
+  <li><b>처리 단계</b> — ① 문서 <em>임베딩</em>(고차원 표현) → ② 차원 축소(dimensionality reduction) → ③ 군집화(clustering) → ④ 군집을 단어로 국소화 → ⑤ 각 문장의 대표성 가중(weighting) → ⑥ 표현. 여기에 <b>LLM 표현 단계</b>를 추가해, 키워드(예: "music, sound journey")와 대표 문장을 LLM에 주면 "sound, hearing, journey"처럼 <b>더 이해하기 쉬운 요약 라벨</b>을 생성.</li>
+  <li><b>스트로보 실험 예시</b> — 각 점이 문장 하나이고 체험 토픽별로 뭉침. <b>스트로보스코픽(stroboscopic) 광자극+음악</b> 조건 vs <b>음악만</b> 조건을 비교하니, 음악만 조건에서 군집이 더 적었음. 만화경(kaleidoscopic) 패턴 지각 등이 나타남.</li>
+  <li><b>코딩 없는 웹 인터페이스</b> — 버튼만 눌러 전 과정 실행. 문장 분할, 짧은 문장(예: 3단어 미만) 제거 같은 전처리, 임베딩 모델 선택(성능 좋지만 무거운 모델 등), 각 파라미터의 뜻과 선택 가이드를 담은 사전형 안내를 내장. 코딩이 되는 사람은 <b>GitHub</b>의 파이프라인을 로컬(GPU)에서 더 빠르게 돌리고 수정도 가능.</li>
+  <li><b>DMT / 5-MeO-DMT 데모</b> — 한 데이터셋(발표 중 "Crystal 29"로 들림, <em>오전사/확인 필요</em>)의 DMT와 5-MeO-DMT 보고에 파이프라인을 적용. DMT에서는 서커스 이미지, 강렬함, 청각적(aural) 요소, 기하학적 색채 패턴, 개체(entities) 존재감 등의 토픽이 등장.</li>
+  <li><b>미시현상학(microphenomenology) 특성 반영</b> — 체험 내용뿐 아니라 <b>체험을 대하는 과정 자체</b>에 관한 토픽(체험 변별의 어려움, 혼란·의문, 사건에 대한 불확실성)도 함께 잡힘. 약 50%에 달한 이상치(outliers)를 줄이는 방법도 추가. 각 군집을 구성하는 개별 문장을 직접 열어볼 수 있어, 무관한 문장이 섞이면 파라미터를 조정하는 <b>품질 점검</b>에 활용.</li>
+</ul>
+<p class="cite">오전사 교정·불확실: 발표자 이름 "Romy Mote"→<b>Romy Beauté</b>(University of Sussex); "Mosaic"→<b>MOSAIC</b>; "MNP pipeline"→<b>NLP 파이프라인</b>; "5-MU DMT"→<b>5-MeO-DMT</b>; "auril"→<b>aural</b>(청각적). 데모 데이터셋 "Crystal 29"와 "nearest experience"(near-death experience일 가능성)는 <b>오전사/확인 필요</b>. 발표 근거 논문의 정식 제목은 녹음에 나오지 않아 표기하지 않음. 녹음은 마지막에 끊겨 인터페이스 시연 후반부는 미기록.</p>
+
       <p class="cite">발표자/소속: Romy Beauté — 영국 University of Sussex, Sussex Centre for Consciousness Science 박사과정 연구자(확정). Anil Seth·Adam Barrett 그룹의 계산현상학(computational phenomenology) 연구자.</p>
 <h4>내용 요약 (제목 기반)</h4><p>제목 그대로 실습형 튜토리얼이다. 참가자들의 자유서술식 현상학 보고(1인칭 경험 텍스트)에서 "경험적 주제(experiential themes)"를 자동으로 뽑아내는 계산 기법 — 토픽 모델링과 대규모 언어모델(LLM) — 을 직접 따라 해보게 하는 방법론 워크숍으로 예상된다. 그녀가 개발한 오픈소스 파이프라인 MOSAIC이 핵심 도구일 가능성이 높다.</p>
 <h4>발표자 연구 방향 · 관련 논문</h4><p>Beauté는 자연어처리·LLM으로 주관적 경험 보고를 데이터 기반으로 분석해, 설문으로는 놓치는 풍부한 체험 구조를 드러내는 연구를 한다. 스트로보(점멸광) 유도 시각 환각의 현상학이 주요 사례다.</p><ul><li>Beauté 외, "Mapping Of Subjective Accounts into Interpreted Clusters (MOSAIC): Topic Modelling and LLM Applied to Stroboscopic Phenomenology" · <em>Neuroscience of Consciousness</em> · 2026 (2025 프리프린트 존재)</li><li>Beauté 외, "Stroboscopically Induced Visual Hallucinations: Historical, Phenomenological, and Neurobiological Perspectives" · <em>Neuroscience of Consciousness</em> · 2025</li><li>"A Large-Scale Computer-Vision Mapping of the Geometric Structures of Stroboscopically-Induced Visual Hallucinations" · 프리프린트 · 2025(추정)</li></ul>
 <h4>예상 논지 (추정)</h4><p>현상학 데이터를 질적 코딩에만 의존하지 말고, 재현 가능하고 확장 가능한 계산 파이프라인으로 처리하자는 것이 핵심 메시지로 보인다. 신경현상학이 늘 안고 온 "1인칭 데이터를 어떻게 체계적으로 정량화할까" 문제에 대해, LLM 기반 주제 추출을 실용적 해법으로 시연하는 실습 세션이 될 것으로 추정된다.</p>
+    
     
     
     
