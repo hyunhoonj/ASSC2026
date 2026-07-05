@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WisX AI — 프로젝트 개요</title>
+<title>WisX AI — Project Overview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@400;500;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+KR:wght@400;500;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --washi:#f4efe6; --washi2:#efe8dc; --card:#fbf8f2; --inset:#f1ebdf;
@@ -14,7 +14,7 @@
   --line:#e6dfd0; --line2:#dad0bd; --rule:#c9bfa9;
   --indigo:#2f4a60; --indigo-dk:#25384a; --vermilion:#b1402f;
   --green:#2e8467; --gold:#957020;
-  --serif:'Nanum Myeongjo','Newsreader','Georgia',serif;
+  --serif:'Newsreader','Nanum Myeongjo','Georgia',serif;
   --sans:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   --shadow:0 1px 2px rgba(70,55,30,.04), 0 8px 24px -16px rgba(70,55,30,.28);
   --shadow-lg:0 2px 6px rgba(70,55,30,.05), 0 22px 50px -30px rgba(70,55,30,.4);
@@ -22,7 +22,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
 body{margin:0; background:var(--washi); color:var(--sumi);
-  font:17px/1.9 var(--serif); word-break:keep-all; overflow-wrap:break-word;
+  font:17px/1.9 var(--serif); overflow-wrap:break-word;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   background-image:radial-gradient(rgba(150,130,90,.04) 1px, transparent 1px);
   background-size:22px 22px}
@@ -38,7 +38,7 @@ b,strong{font-weight:700; color:var(--sumi-dk)}
   border-bottom:1px solid var(--line); margin-bottom:40px}
 .topbar .home{font-family:var(--serif); font-weight:800; font-size:21px; color:var(--sumi-dk)}
 .topbar .crumbs{font-family:var(--sans); color:var(--muted); font-size:13px; flex:1}
-.topbar nav{font-family:var(--sans); font-size:13.5px; display:flex; gap:20px}
+.topbar nav{font-family:var(--sans); font-size:13.5px; display:flex; gap:20px; align-items:center}
 .topbar nav a{color:var(--muted)}
 .topbar nav a:hover{color:var(--indigo); text-decoration:none}
 .topbar nav a.lang{font-weight:700; color:var(--indigo); border:1px solid var(--line2);
@@ -49,9 +49,9 @@ b,strong{font-weight:700; color:var(--sumi-dk)}
 .hero{text-align:center; padding:30px 0 8px}
 .eyebrow{font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.16em;
   text-transform:uppercase; color:var(--vermilion); margin-bottom:16px}
-h1{font-family:var(--serif); font-weight:800; font-size:46px; line-height:1.28;
-  color:var(--sumi-dk); margin:0 0 20px; letter-spacing:-.01em}
-.lead{max-width:660px; margin:0 auto; color:var(--muted); font-size:18.5px; line-height:1.85}
+h1{font-family:var(--serif); font-weight:800; font-size:48px; line-height:1.2;
+  color:var(--sumi-dk); margin:0 0 20px; letter-spacing:-.015em}
+.lead{max-width:680px; margin:0 auto; color:var(--muted); font-size:18.5px; line-height:1.8}
 .lead b{color:var(--sumi)}
 
 /* section scaffolding */
@@ -59,7 +59,7 @@ section{margin-top:76px}
 .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:26px}
 .sec-num{font-family:var(--sans); font-size:13px; font-weight:700; color:var(--vermilion);
   letter-spacing:.05em; padding-top:6px}
-h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-dk); margin:0; line-height:1.4}
+h2{font-family:var(--serif); font-weight:800; font-size:31px; color:var(--sumi-dk); margin:0; line-height:1.35}
 .sec-head .rule{flex:1; height:1px; background:var(--line); align-self:center}
 
 /* ============ 1. VISION FLOW DIAGRAM ============ */
@@ -67,13 +67,13 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
   padding:48px 40px 40px; box-shadow:var(--shadow-lg)}
 .values{display:grid; grid-template-columns:repeat(3,1fr); gap:26px}
 .value{text-align:center; position:relative}
-.orb{width:132px; height:132px; margin:0 auto 18px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center; text-align:center;
-  font-family:var(--serif); font-weight:700; font-size:17px; line-height:1.4; color:var(--sumi-dk);
+.orb{width:138px; height:138px; margin:0 auto 18px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; text-align:center; padding:0 14px;
+  font-family:var(--serif); font-weight:700; font-size:16px; line-height:1.35; color:var(--sumi-dk);
   background:radial-gradient(circle at 35% 30%, #ffffff, var(--washi2));
   border:1px solid var(--line2);
   box-shadow:0 2px 4px rgba(70,55,30,.05), inset 0 1px 3px rgba(255,255,255,.9), 0 16px 30px -18px rgba(70,55,30,.5)}
-.value .cap{font-family:var(--sans); font-size:13.5px; color:var(--muted); line-height:1.7; max-width:270px; margin:0 auto}
+.value .cap{font-family:var(--sans); font-size:13.5px; color:var(--muted); line-height:1.7; max-width:280px; margin:0 auto}
 .value .k{color:var(--vermilion); font-weight:700}
 
 .connector{display:flex; justify-content:center; margin:14px 0 6px}
@@ -100,8 +100,8 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
   text-transform:uppercase; display:inline-block; padding:4px 11px; border-radius:999px; margin-bottom:14px; align-self:flex-start}
 .pcard.agent .tag{color:var(--indigo); background:#e7edf3}
 .pcard.video .tag{color:var(--green); background:#e3efe9}
-.pcard h3{font-family:var(--serif); font-weight:800; font-size:22px; color:var(--sumi-dk); margin:0 0 8px}
-.pcard p{margin:0 0 18px; color:var(--sumi); font-size:16px; line-height:1.85}
+.pcard h3{font-family:var(--serif); font-weight:800; font-size:23px; color:var(--sumi-dk); margin:0 0 8px}
+.pcard p{margin:0 0 18px; color:var(--sumi); font-size:16px; line-height:1.8}
 
 /* orchestrator tree */
 .orch{margin-top:6px}
@@ -143,7 +143,7 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
 .pstep.done .pd{background:var(--green)}
 .pstep.doing .pd{background:var(--gold); box-shadow:0 0 0 0 rgba(149,112,32,.5); animation:pulse 1.8s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(149,112,32,.45)}70%{box-shadow:0 0 0 8px rgba(149,112,32,0)}100%{box-shadow:0 0 0 0 rgba(149,112,32,0)}}
-.pstep h3{font-family:var(--serif); font-weight:800; font-size:20px; color:var(--sumi-dk); margin:0 0 14px}
+.pstep h3{font-family:var(--serif); font-weight:800; font-size:21px; color:var(--sumi-dk); margin:0 0 14px}
 .track{height:9px; border-radius:999px; background:var(--inset); overflow:hidden; margin-bottom:10px}
 .track .fill{height:100%; border-radius:999px}
 .pstep.done .fill{width:100%; background:linear-gradient(90deg,#3f9a7a,var(--green))}
@@ -153,7 +153,7 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
 /* ---- responsive fallback ---- */
 @media(max-width:880px){
   .shell{padding:0 22px 90px}
-  h1{font-size:34px}
+  h1{font-size:36px}
   .values{grid-template-columns:1fr; gap:18px}
   .cards2,.outputs,.prog{grid-template-columns:1fr}
   .connector{display:none}
@@ -165,42 +165,42 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
 
   <div class="topbar">
     <span class="home">WisX AI</span>
-    <span class="crumbs">프로젝트 자료 · 0126 정기 미팅</span>
+    <span class="crumbs">Project Materials · 0126 Regular Meeting</span>
     <nav>
-      <a href="#vision">비전</a>
-      <a href="#outputs">산출물</a>
-      <a href="#progress">진행 상황</a>
-      <a class="lang" href="wisx-overview-en.html">EN</a>
+      <a href="#vision">Vision</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#progress">Progress</a>
+      <a class="lang" href="wisx-overview.html">KO</a>
     </nav>
   </div>
 
   <header class="hero">
-    <div class="eyebrow">WisX · 지혜의 시간여행</div>
-    <h1>고전의 지혜를<br>AI로 되살리다</h1>
-    <p class="lead"><b>WisX란?</b><br>고대 지혜와 현대 AI 디지털 과학의 창조적 만남을 통한 <b>공진화의 여정</b></p>
+    <div class="eyebrow">WisX · Time Travel of Wisdom</div>
+    <h1>Reviving Ancient<br>Wisdom through AI</h1>
+    <p class="lead"><b>What is WisX?</b><br>A journey of <b>co-evolution</b> through the creative encounter of ancient wisdom and modern AI digital science.</p>
   </header>
 
   <!-- ============ 1. VISION ============ -->
   <section id="vision">
     <div class="sec-head">
       <span class="sec-num">01</span>
-      <h2>비전 한눈에 보기</h2>
+      <h2>The Vision at a Glance</h2>
       <span class="rule"></span>
     </div>
 
     <div class="flow">
       <div class="values">
         <div class="value">
-          <div class="orb">AI 클린<br>데이터 제공</div>
-          <p class="cap">고전의 지혜가 담긴 텍스트·오디오·비디오 = <span class="k">신뢰할 수 있는 클린 데이터</span></p>
+          <div class="orb">AI Clean Data<br>Provision</div>
+          <p class="cap">Classical wisdom in text, audio &amp; video = <span class="k">trustworthy clean data</span></p>
         </div>
         <div class="value">
-          <div class="orb">디지털 세대<br>접근성</div>
-          <p class="cap">젊은 세대가 친숙한 형태<span class="k">(에이전트·생성된 영상)</span>로 지혜를 전달</p>
+          <div class="orb">Digital-Generation<br>Accessibility</div>
+          <p class="cap">Delivering wisdom in familiar forms <span class="k">(agents · generated video)</span> for younger generations</p>
         </div>
         <div class="value">
-          <div class="orb">인간 – AI<br>공진화</div>
-          <p class="cap">상호작용 데이터로 <span class="k">함께 학습·성장</span>하는 관계</p>
+          <div class="orb">Human – AI<br>Co-evolution</div>
+          <p class="cap">A relationship that <span class="k">learns &amp; grows together</span> through interaction data</p>
         </div>
       </div>
 
@@ -221,13 +221,13 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
         <div class="output agent">
           <div class="lbl">Output 01</div>
           <div class="name">WisX AI Agent</div>
-          <div class="desc">WisX 컨셉이 모두 반영된 AI 에이전트를 구성·배포</div>
+          <div class="desc">An AI agent embodying the full WisX concept, built &amp; deployed</div>
           <div class="glyph">◈</div>
         </div>
         <div class="output video">
           <div class="lbl">Output 02</div>
           <div class="name">WisX Multimedia<br>(Immersive) Content</div>
-          <div class="desc">이야기 기반 몰입형 콘텐츠를 WisX 플랫폼에서</div>
+          <div class="desc">Story-based immersive content on the WisX platform</div>
           <div class="glyph">▷</div>
         </div>
       </div>
@@ -238,7 +238,7 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
   <section id="outputs">
     <div class="sec-head">
       <span class="sec-num">02</span>
-      <h2>두 가지 최종 산출물</h2>
+      <h2>The Two Final Outputs</h2>
       <span class="rule"></span>
     </div>
 
@@ -246,14 +246,14 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
       <div class="pcard agent">
         <span class="tag">Output 01 · Agent</span>
         <h3>WisX AI Agent</h3>
-        <p>WisX AI의 컨셉이 모두 반영된 AI 에이전트를 구성·배포한다. 아래는 멀티 에이전트 구조 예시.</p>
+        <p>An AI agent reflecting the entire WisX AI concept is built and deployed. Below is an example multi-agent architecture.</p>
         <div class="orch">
-          <div class="root"><span class="ico">🧭</span> 오케스트레이터 <span style="opacity:.7;font-weight:400">— 전체 흐름 조율</span></div>
+          <div class="root"><span class="ico">🧭</span> Orchestrator <span style="opacity:.7;font-weight:400">— coordinates the overall flow</span></div>
           <div class="branch">
-            <div class="agent-node"><span class="dot">📜</span><span class="txt">경전 탐색 에이전트</span></div>
-            <div class="agent-node"><span class="dot">🔬</span><span class="txt">현대 과학 용어 변환 에이전트</span></div>
-            <div class="agent-node"><span class="dot">🎭</span><span class="txt">스토리텔링 · 롤플레잉 에이전트</span></div>
-            <div class="agent-node"><span class="dot">🧘</span><span class="txt">명상 방법 개발 에이전트</span></div>
+            <div class="agent-node"><span class="dot">📜</span><span class="txt">Scripture Exploration Agent</span></div>
+            <div class="agent-node"><span class="dot">🔬</span><span class="txt">Modern Scientific Terminology Translation Agent</span></div>
+            <div class="agent-node"><span class="dot">🎭</span><span class="txt">Storytelling · Role-playing Agent</span></div>
+            <div class="agent-node"><span class="dot">🧘</span><span class="txt">Meditation Method Development Agent</span></div>
           </div>
         </div>
       </div>
@@ -261,15 +261,15 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
       <div class="pcard video">
         <span class="tag">Output 02 · Immersive</span>
         <h3>WisX Immersive Media Content</h3>
-        <p>WisX AI의 이야기에 대한 Immersive Contents를 생성해 <b>WisX 플랫폼</b>에서 즐길 수 있도록 한다.</p>
+        <p>Immersive content is generated from WisX AI's stories so it can be enjoyed on the <b>WisX platform</b>.</p>
         <div class="imm-hero">
           <div class="big">🎬🎵🕶️</div>
-          <div class="cap">이야기 → 몰입형(Immersive) 콘텐츠 → WisX 플랫폼</div>
+          <div class="cap">Story → Immersive Content → WisX Platform</div>
         </div>
         <div class="imm" style="margin-top:16px">
-          <span class="chip">몰입형 경험</span>
-          <span class="chip">멀티미디어</span>
-          <span class="chip">WisX 플랫폼</span>
+          <span class="chip">Immersive Experience</span>
+          <span class="chip">Multimedia</span>
+          <span class="chip">WisX Platform</span>
         </div>
       </div>
     </div>
@@ -279,30 +279,30 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
   <section id="progress">
     <div class="sec-head">
       <span class="sec-num">03</span>
-      <h2>진행 상황</h2>
+      <h2>Progress</h2>
       <span class="rule"></span>
     </div>
 
     <div class="prog">
       <div class="pstep done">
-        <span class="pstate"><span class="pd"></span> 1차 완료</span>
-        <h3>WisX Agent 구축</h3>
+        <span class="pstate"><span class="pd"></span> Phase 1 Complete</span>
+        <h3>WisX Agent Build</h3>
         <div class="track"><div class="fill"></div></div>
-        <p class="note">멀티 에이전트 구조 기반 WisX Agent 구축 <b>진행 1차 완료</b></p>
+        <p class="note">Phase 1 of building the WisX Agent on a multi-agent architecture is <b>complete</b>.</p>
       </div>
       <div class="pstep doing">
-        <span class="pstate"><span class="pd"></span> 진행 중</span>
-        <h3>Immersive Media Content 플랫폼</h3>
+        <span class="pstate"><span class="pd"></span> In Progress</span>
+        <h3>Immersive Media Content Platform</h3>
         <div class="track"><div class="fill"></div></div>
-        <p class="note">WisX Immersive Media Content <b>플랫폼 구축 진행 중</b></p>
+        <p class="note">Building the WisX Immersive Media Content platform is <b>in progress</b>.</p>
       </div>
     </div>
   </section>
 
   <footer style="margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
     font-family:var(--sans); color:var(--muted); font-size:13px; text-align:center; line-height:1.9">
-    출처: [WisX] 0126 정기 미팅 노트 · 비전 맵 다이어그램<br>
-    WisX · 지혜의 시간여행
+    Source: [WisX] 0126 Regular Meeting Notes · Vision Map Diagram<br>
+    WisX · Time Travel of Wisdom
   </footer>
 
 </div>
