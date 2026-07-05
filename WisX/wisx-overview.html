@@ -43,12 +43,12 @@ b,strong{font-weight:700; color:var(--sumi-dk)}
 .topbar nav a:hover{color:var(--indigo); text-decoration:none}
 
 /* ---- hero ---- */
-.hero{text-align:center; padding:26px 0 8px}
+.hero{text-align:center; padding:30px 0 8px}
 .eyebrow{font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.16em;
   text-transform:uppercase; color:var(--vermilion); margin-bottom:16px}
 h1{font-family:var(--serif); font-weight:800; font-size:46px; line-height:1.28;
-  color:var(--sumi-dk); margin:0 0 18px; letter-spacing:-.01em}
-.lead{max-width:640px; margin:0 auto; color:var(--muted); font-size:18px; line-height:1.8}
+  color:var(--sumi-dk); margin:0 0 20px; letter-spacing:-.01em}
+.lead{max-width:660px; margin:0 auto; color:var(--muted); font-size:18.5px; line-height:1.85}
 .lead b{color:var(--sumi)}
 
 /* section scaffolding */
@@ -70,7 +70,7 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
   background:radial-gradient(circle at 35% 30%, #ffffff, var(--washi2));
   border:1px solid var(--line2);
   box-shadow:0 2px 4px rgba(70,55,30,.05), inset 0 1px 3px rgba(255,255,255,.9), 0 16px 30px -18px rgba(70,55,30,.5)}
-.value .cap{font-family:var(--sans); font-size:13.5px; color:var(--muted); line-height:1.7; max-width:260px; margin:0 auto}
+.value .cap{font-family:var(--sans); font-size:13.5px; color:var(--muted); line-height:1.7; max-width:270px; margin:0 auto}
 .value .k{color:var(--vermilion); font-weight:700}
 
 .connector{display:flex; justify-content:center; margin:14px 0 6px}
@@ -78,27 +78,27 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
 .connector path{fill:none; stroke:var(--rule); stroke-width:2}
 .connector .node{fill:var(--rule)}
 
-.outputs{display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:720px; margin:0 auto}
+.outputs{display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:760px; margin:0 auto}
 .output{border-radius:16px; padding:24px 26px; color:#fff; position:relative; overflow:hidden;
   box-shadow:0 18px 36px -22px rgba(40,40,30,.7)}
 .output.agent{background:linear-gradient(135deg,#34557a,#233c53)}
 .output.video{background:linear-gradient(135deg,#2e8467,#22624c)}
 .output .lbl{font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.14em;
   text-transform:uppercase; opacity:.72; margin-bottom:8px}
-.output .name{font-family:var(--serif); font-weight:800; font-size:25px; margin-bottom:6px; letter-spacing:.01em}
-.output .desc{font-family:var(--sans); font-size:14px; line-height:1.7; opacity:.9}
+.output .name{font-family:var(--serif); font-weight:800; font-size:23px; margin-bottom:6px; letter-spacing:.01em; line-height:1.3}
+.output .desc{font-family:var(--sans); font-size:13.5px; line-height:1.7; opacity:.9}
 .output .glyph{position:absolute; right:-8px; bottom:-14px; font-size:88px; opacity:.13; line-height:1}
 
 /* ============ 2. OUTPUT DETAIL CARDS ============ */
 .cards2{display:grid; grid-template-columns:1fr 1fr; gap:26px}
 .pcard{background:var(--card); border:1px solid var(--line2); border-radius:16px;
-  padding:28px 30px; box-shadow:var(--shadow); position:relative}
+  padding:28px 30px; box-shadow:var(--shadow); position:relative; display:flex; flex-direction:column}
 .pcard .tag{font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.1em;
-  text-transform:uppercase; display:inline-block; padding:4px 11px; border-radius:999px; margin-bottom:14px}
+  text-transform:uppercase; display:inline-block; padding:4px 11px; border-radius:999px; margin-bottom:14px; align-self:flex-start}
 .pcard.agent .tag{color:var(--indigo); background:#e7edf3}
 .pcard.video .tag{color:var(--green); background:#e3efe9}
 .pcard h3{font-family:var(--serif); font-weight:800; font-size:22px; color:var(--sumi-dk); margin:0 0 8px}
-.pcard p{margin:0 0 18px; color:var(--sumi); font-size:16px}
+.pcard p{margin:0 0 18px; color:var(--sumi); font-size:16px; line-height:1.85}
 
 /* orchestrator tree */
 .orch{margin-top:6px}
@@ -110,70 +110,50 @@ h2{font-family:var(--serif); font-weight:800; font-size:29px; color:var(--sumi-d
 .agent-node{display:flex; align-items:center; gap:11px; padding:11px 0; position:relative}
 .agent-node::before{content:""; position:absolute; left:-20px; top:50%; width:16px; height:2px; background:var(--line2)}
 .agent-node .dot{width:30px; height:30px; border-radius:8px; flex:none; display:flex; align-items:center;
-  justify-content:center; font-size:15px; background:var(--washi2); border:1px solid var(--line2)}
+  justify-content:center; font-size:15px; background:var(--washi2); border:1px solid var(--line2); transition:.14s}
 .agent-node .txt{font-family:var(--sans); font-size:14.5px; color:var(--sumi-dk); font-weight:500}
-.agent-node:hover .dot{border-color:var(--rule); transform:translateY(-1px); transition:.14s}
+.agent-node:hover .dot{border-color:var(--rule); transform:translateY(-1px)}
 
-.vlist{list-style:none; padding:0; margin:0}
-.vlist li{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line)}
-.vlist li:last-child{border-bottom:0}
-.vlist .vi{font-size:20px; flex:none; line-height:1.4}
-.vlist .vt{font-family:var(--sans); font-size:14.5px; color:var(--sumi); line-height:1.7}
-.vlist .vt b{color:var(--sumi-dk)}
+/* immersive card visual */
+.imm{margin-top:auto; display:flex; flex-wrap:wrap; gap:10px}
+.chip{font-family:var(--sans); font-size:13px; font-weight:500; color:var(--green);
+  background:#e3efe9; border:1px solid #cfe4d9; border-radius:999px; padding:7px 14px;
+  display:inline-flex; align-items:center; gap:7px}
+.imm-hero{margin-top:2px; border-radius:12px; padding:22px 20px; text-align:center;
+  background:radial-gradient(circle at 50% 0%, #eaf4ef, var(--inset));
+  border:1px solid var(--line2)}
+.imm-hero .big{font-size:38px; line-height:1}
+.imm-hero .cap{font-family:var(--sans); font-size:13.5px; color:var(--muted); margin-top:10px}
 
-/* ============ 3. CONSIDERATION CARDS ============ */
-.cons{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
-.con{background:var(--card); border:1px solid var(--line2); border-radius:16px; overflow:hidden;
-  box-shadow:var(--shadow); display:flex; flex-direction:column}
-.con .top{padding:22px 24px 18px; border-bottom:1px solid var(--line)}
-.con .num{font-family:var(--serif); font-weight:800; font-size:15px; color:var(--vermilion)}
-.con h3{font-family:var(--serif); font-weight:800; font-size:19px; color:var(--sumi-dk); margin:6px 0 0}
-.con .body{padding:20px 24px 24px; font-size:15px}
-.qrow{margin:0 0 16px}
-.qrow:last-child{margin-bottom:0}
-.qlabel{font-family:var(--sans); font-size:13px; font-weight:700; color:var(--indigo);
-  display:inline-flex; align-items:center; gap:7px; margin-bottom:7px}
-.qlabel::before{content:"Q"; font-size:10px; width:17px; height:17px; border-radius:50%;
-  background:var(--indigo); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-weight:700}
-.con ul{margin:0; padding-left:18px}
-.con li{margin:6px 0; line-height:1.72; font-family:var(--sans); font-size:13.5px; color:var(--sumi)}
-.con li::marker{color:var(--faint)}
-.con .ex{list-style:none; padding:0; margin:12px 0 0}
-.con .ex li{margin:8px 0}
-.con .ex a{font-family:var(--sans); font-size:13.5px; display:inline-flex; align-items:center; gap:7px}
-.con .ex a::before{content:"↗"; color:var(--faint); font-size:12px}
-.warn{font-family:var(--sans); font-size:13px; background:#f6ece3; border:1px solid #e8d3bf;
-  color:#8a4a2c; border-radius:9px; padding:10px 13px; margin:0 0 14px; line-height:1.6}
+/* ============ 3. PROGRESS ============ */
+.prog{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.pstep{background:var(--card); border:1px solid var(--line2); border-radius:16px;
+  padding:26px 28px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+.pstep::before{content:""; position:absolute; left:0; top:0; bottom:0; width:5px}
+.pstep.done::before{background:var(--green)}
+.pstep.doing::before{background:var(--gold)}
+.pstep .pstate{font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:.06em;
+  display:inline-flex; align-items:center; gap:8px; padding:5px 12px; border-radius:999px; margin-bottom:16px}
+.pstep.done .pstate{color:var(--green); background:#e3efe9}
+.pstep.doing .pstate{color:var(--gold); background:#f4eddb}
+.pstep .pstate .pd{width:8px; height:8px; border-radius:50%}
+.pstep.done .pd{background:var(--green)}
+.pstep.doing .pd{background:var(--gold); box-shadow:0 0 0 0 rgba(149,112,32,.5); animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(149,112,32,.45)}70%{box-shadow:0 0 0 8px rgba(149,112,32,0)}100%{box-shadow:0 0 0 0 rgba(149,112,32,0)}}
+.pstep h3{font-family:var(--serif); font-weight:800; font-size:20px; color:var(--sumi-dk); margin:0 0 14px}
+.track{height:9px; border-radius:999px; background:var(--inset); overflow:hidden; margin-bottom:10px}
+.track .fill{height:100%; border-radius:999px}
+.pstep.done .fill{width:100%; background:linear-gradient(90deg,#3f9a7a,var(--green))}
+.pstep.doing .fill{width:55%; background:linear-gradient(90deg,#c79a3a,var(--gold))}
+.pstep .note{font-family:var(--sans); font-size:13.5px; color:var(--muted)}
 
-/* ============ 4. REFERENCES ============ */
-.refs{background:var(--card); border:1px solid var(--line2); border-radius:16px; overflow:hidden;
-  box-shadow:var(--shadow)}
-.ref{display:grid; grid-template-columns:200px 1fr; gap:20px; padding:18px 26px; align-items:center;
-  border-bottom:1px solid var(--line); transition:background .14s}
-.ref:last-child{border-bottom:0}
-.ref:hover{background:var(--inset)}
-.ref .rk{font-family:var(--sans); font-weight:700; font-size:14px; color:var(--sumi-dk);
-  display:flex; align-items:center; gap:10px}
-.ref .rk .ri{font-size:17px}
-.ref .rv{font-family:var(--sans); font-size:14px; color:var(--muted); word-break:break-all}
-.ref .rv a{color:var(--indigo)}
-
-/* vision-map source image */
-.imgwrap{margin-top:30px; text-align:center}
-.imgwrap img{max-width:100%; border-radius:14px; border:1px solid var(--line2); box-shadow:var(--shadow-lg)}
-.imgwrap figcaption{font-family:var(--sans); font-size:13px; color:var(--faint); margin-top:12px}
-
-footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
-  font-family:var(--sans); color:var(--muted); font-size:13px; text-align:center; line-height:1.9}
-
-/* ---- responsive fallback (still viewable if window narrows) ---- */
+/* ---- responsive fallback ---- */
 @media(max-width:880px){
   .shell{padding:0 22px 90px}
   h1{font-size:34px}
-  .values,.cons{grid-template-columns:1fr; gap:18px}
-  .cards2,.outputs{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr; gap:18px}
+  .cards2,.outputs,.prog{grid-template-columns:1fr}
   .connector{display:none}
-  .ref{grid-template-columns:1fr; gap:6px}
 }
 </style>
 </head>
@@ -186,16 +166,14 @@ footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
     <nav>
       <a href="#vision">비전</a>
       <a href="#outputs">산출물</a>
-      <a href="#considerations">고려사항</a>
-      <a href="#refs">자료</a>
+      <a href="#progress">진행 상황</a>
     </nav>
   </div>
 
   <header class="hero">
     <div class="eyebrow">WisX · 지혜의 시간여행</div>
     <h1>고전의 지혜를<br>AI로 되살리다</h1>
-    <p class="lead">WisX 매뉴얼을 바탕으로 <b>고전의 지혜를 담은 AI</b>를 어떻게 구현할지 정리한 문서.
-    2026-01-26 정기 미팅의 아이디에이션 내용을 구조화했다.</p>
+    <p class="lead"><b>WisX란?</b><br>고대 지혜와 현대 AI 디지털 과학의 창조적 만남을 통한 <b>공진화의 여정</b></p>
   </header>
 
   <!-- ============ 1. VISION ============ -->
@@ -210,11 +188,11 @@ footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
       <div class="values">
         <div class="value">
           <div class="orb">AI 클린<br>데이터 제공</div>
-          <p class="cap">고전의 지혜가 담긴 텍스트 = <span class="k">신뢰할 수 있는 클린 데이터</span></p>
+          <p class="cap">고전의 지혜가 담긴 텍스트·오디오·비디오 = <span class="k">신뢰할 수 있는 클린 데이터</span></p>
         </div>
         <div class="value">
           <div class="orb">디지털 세대<br>접근성</div>
-          <p class="cap">젊은 세대가 친숙한 형태<span class="k">(에이전트·영상)</span>로 지혜를 전달</p>
+          <p class="cap">젊은 세대가 친숙한 형태<span class="k">(에이전트·생성된 영상)</span>로 지혜를 전달</p>
         </div>
         <div class="value">
           <div class="orb">인간 – AI<br>공진화</div>
@@ -224,16 +202,14 @@ footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
 
       <div class="connector">
         <svg viewBox="0 0 560 86" preserveAspectRatio="xMidYMid meet">
-          <!-- three tops -->
           <path d="M93,4 V34 Q93,46 160,46 H280"/>
           <path d="M280,4 V46"/>
           <path d="M467,4 V34 Q467,46 400,46 H280"/>
-          <!-- split down to two outputs -->
           <path d="M280,46 V54 Q280,64 200,64 H160 V82"/>
           <path d="M280,46 V54 Q280,64 360,64 H400 V82"/>
           <circle class="node" cx="280" cy="46" r="4"/>
-          <path d="M154,76 l6,8 l6,-8" />
-          <path d="M394,76 l6,8 l6,-8" />
+          <path d="M154,76 l6,8 l6,-8"/>
+          <path d="M394,76 l6,8 l6,-8"/>
         </svg>
       </div>
 
@@ -246,8 +222,8 @@ footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
         </div>
         <div class="output video">
           <div class="lbl">Output 02</div>
-          <div class="name">WisX Video Content</div>
-          <div class="desc">이야기를 영상 콘텐츠화해 플랫폼에 업로드</div>
+          <div class="name">WisX Multimedia<br>(Immersive) Content</div>
+          <div class="desc">이야기 기반 몰입형 콘텐츠를 WisX 플랫폼에서</div>
           <div class="glyph">▷</div>
         </div>
       </div>
@@ -279,142 +255,48 @@ footer{margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
       </div>
 
       <div class="pcard video">
-        <span class="tag">Output 02 · Video</span>
-        <h3>WisX Video Content</h3>
-        <p>WisX AI의 이야기를 영상 콘텐츠로 만들어 영상 플랫폼에 업로드한다.</p>
-        <ul class="vlist">
-          <li><span class="vi">🎬</span><span class="vt">이야기를 <b>영상 미디어</b>로 구체화해 플랫폼 배포</span></li>
-          <li><span class="vi">🎵</span><span class="vt"><b>음악</b>이 강력한 미디어 요소로 기능할 수 있음</span></li>
-          <li><span class="vi">📄</span><span class="vt">소장님이 준비 중인 <b>소설</b>을 원천 이야기로 활용</span></li>
-        </ul>
+        <span class="tag">Output 02 · Immersive</span>
+        <h3>WisX Immersive Media Content</h3>
+        <p>WisX AI의 이야기에 대한 Immersive Contents를 생성해 <b>WisX 플랫폼</b>에서 즐길 수 있도록 한다.</p>
+        <div class="imm-hero">
+          <div class="big">🎬🎵🕶️</div>
+          <div class="cap">이야기 → 몰입형(Immersive) 콘텐츠 → WisX 플랫폼</div>
+        </div>
+        <div class="imm" style="margin-top:16px">
+          <span class="chip">몰입형 경험</span>
+          <span class="chip">멀티미디어</span>
+          <span class="chip">WisX 플랫폼</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 3. CONSIDERATIONS ============ -->
-  <section id="considerations">
+  <!-- ============ 3. PROGRESS ============ -->
+  <section id="progress">
     <div class="sec-head">
       <span class="sec-num">03</span>
-      <h2>비전별 구체화 시 고려사항</h2>
+      <h2>진행 상황</h2>
       <span class="rule"></span>
     </div>
 
-    <div class="cons">
-      <!-- 3-1 -->
-      <div class="con">
-        <div class="top">
-          <div class="num">3-1</div>
-          <h3>AI 클린 데이터 제공</h3>
-        </div>
-        <div class="body">
-          <div class="qrow">
-            <span class="qlabel">어떤 모델에?</span>
-            <ul>
-              <li>모델을 직접 만들지 않는다는 전제 → 기반 모델 선정 필요</li>
-              <li>추가 튜닝 또는 <b>RAG / MCP</b> 지원이 가능한 모델이어야 함</li>
-            </ul>
-          </div>
-          <div class="qrow">
-            <span class="qlabel">어떤 방식으로?</span>
-            <ul>
-              <li>생성형 AI는 고전 텍스트를 <b>이미 학습</b>했을 가능성이 높음</li>
-              <li>그렇다면 선정 텍스트를 <b>어떻게 차별화해 활용</b>할지 고민 필요</li>
-              <li>학습 시 기대하는 <b>아웃풋</b> 정의 필요</li>
-            </ul>
-          </div>
-          <div class="qrow">
-            <span class="qlabel">어떻게?</span>
-            <ul>
-              <li>학습/연동 후 <b>최종 결과물의 형상</b> 정의 필요</li>
-              <li>예: 별도 WisX AI Agent? 커버 범위는 어디까지(종교적/고전 전체)?</li>
-            </ul>
-          </div>
-        </div>
+    <div class="prog">
+      <div class="pstep done">
+        <span class="pstate"><span class="pd"></span> 1차 완료</span>
+        <h3>WisX Agent 구축</h3>
+        <div class="track"><div class="fill"></div></div>
+        <p class="note">멀티 에이전트 구조 기반 WisX Agent 구축 <b>진행 1차 완료</b></p>
       </div>
-
-      <!-- 3-2 -->
-      <div class="con">
-        <div class="top">
-          <div class="num">3-2</div>
-          <h3>인간 – AI 공진화</h3>
-        </div>
-        <div class="body">
-          <div class="warn">AI의 '형상'이 무엇인지 정의가 <b>선행</b>되어야 함</div>
-          <ul>
-            <li>ChatGPT · Claude · Gemini 같은 <b>완성형 서비스에는 공진화 적용 불가</b></li>
-            <li><b>별도의 AI 에이전트 서비스</b> 필요 → 상호작용 데이터 기반 추가 학습</li>
-          </ul>
-          <ul class="ex">
-            <li><a href="https://chowon.in/" target="_blank" rel="noopener">초원 (chowon.in)</a></li>
-            <li><a href="https://character.ai/character/Z5WaWtty/mechanical-buddah-cultivation-guide" target="_blank" rel="noopener">Mechanical Buddha (character.ai)</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 3-3 -->
-      <div class="con">
-        <div class="top">
-          <div class="num">3-3</div>
-          <h3>디지털 세대 접근성</h3>
-        </div>
-        <div class="body">
-          <div class="qrow">
-            <span class="qlabel">AI 에이전트 제작</span>
-            <ul><li>위 멀티 에이전트를 목표로 준비</li></ul>
-          </div>
-          <div class="qrow">
-            <span class="qlabel">AI 활용 미디어 제작</span>
-            <ul>
-              <li>소장님이 준비 중인 <b>소설</b>을 AI 영상 미디어로 구체화</li>
-              <li>AI 활용 영화 제작 자료 다수 존재</li>
-            </ul>
-          </div>
-          <ul class="ex">
-            <li><a href="https://openreview.net/pdf/307a103650e4d760b09caf1fac5514a8b0514832.pdf" target="_blank" rel="noopener">자동 영화 제작 논문 (ICLR 2026 리뷰 중)</a></li>
-          </ul>
-        </div>
+      <div class="pstep doing">
+        <span class="pstate"><span class="pd"></span> 진행 중</span>
+        <h3>Immersive Media Content 플랫폼</h3>
+        <div class="track"><div class="fill"></div></div>
+        <p class="note">WisX Immersive Media Content <b>플랫폼 구축 진행 중</b></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ 4. REFERENCES ============ -->
-  <section id="refs">
-    <div class="sec-head">
-      <span class="sec-num">04</span>
-      <h2>참고 자료 · 링크</h2>
-      <span class="rule"></span>
-    </div>
-
-    <div class="refs">
-      <div class="ref">
-        <div class="rk"><span class="ri">📕</span> 초고 PDF</div>
-        <div class="rv">WisX AI_지혜의 시간여행_초고.pdf <span style="color:var(--faint)">(내부 파일)</span></div>
-      </div>
-      <div class="ref">
-        <div class="rk"><span class="ri">🎨</span> Figma 보드</div>
-        <div class="rv"><a href="https://www.figma.com/board/TUrpcH9ao1Y6kAJA5bwyg6/" target="_blank" rel="noopener">figma.com/board/TUrpcH9ao1Y6kAJA5bwyg6</a></div>
-      </div>
-      <div class="ref">
-        <div class="rk"><span class="ri">🌾</span> 초원</div>
-        <div class="rv"><a href="https://chowon.in/" target="_blank" rel="noopener">chowon.in</a></div>
-      </div>
-      <div class="ref">
-        <div class="rk"><span class="ri">🤖</span> Mechanical Buddha</div>
-        <div class="rv"><a href="https://character.ai/character/Z5WaWtty/mechanical-buddah-cultivation-guide" target="_blank" rel="noopener">character.ai/character/Z5WaWtty</a></div>
-      </div>
-      <div class="ref">
-        <div class="rk"><span class="ri">📄</span> 자동 영화 제작 논문</div>
-        <div class="rv"><a href="https://openreview.net/pdf/307a103650e4d760b09caf1fac5514a8b0514832.pdf" target="_blank" rel="noopener">openreview.net · ICLR 2026 리뷰 중</a></div>
-      </div>
-    </div>
-
-    <figure class="imgwrap">
-      <img src="assets/vision-map.jpeg" alt="WisX 비전 맵 — 세 핵심 가치가 두 산출물로 수렴">
-      <figcaption>원본 비전 맵 다이어그램</figcaption>
-    </figure>
-  </section>
-
-  <footer>
+  <footer style="margin-top:96px; padding-top:26px; border-top:1px solid var(--line);
+    font-family:var(--sans); color:var(--muted); font-size:13px; text-align:center; line-height:1.9">
     출처: [WisX] 0126 정기 미팅 노트 · 비전 맵 다이어그램<br>
     WisX · 지혜의 시간여행
   </footer>
